@@ -1,0 +1,2 @@
+# StudentEnrollmentPlatform
+Student Enrollment Platform
