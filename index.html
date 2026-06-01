@@ -6,7 +6,6 @@
 <title>Activly — Strategic Business Plan</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 :root{
@@ -20,8 +19,7 @@
   --gray-50:#F9FAFB;--gray-100:#F3F4F6;--gray-200:#E5E7EB;
   --gray-300:#D1D5DB;--gray-400:#9CA3AF;--gray-500:#6B7280;
   --gray-600:#4B5563;--gray-700:#374151;--gray-800:#1F2937;--gray-900:#111827;
-  --fh:'Outfit',sans-serif;
-  --fb:'Plus Jakarta Sans',sans-serif;
+  --fh:'Outfit',sans-serif;--fb:'Plus Jakarta Sans',sans-serif;
   --radius:10px;--radius-lg:14px;
 }
 body{font-family:var(--fb);background:var(--gray-50);color:var(--gray-800);font-size:15px;line-height:1.6;}
@@ -32,13 +30,14 @@ body{font-family:var(--fb);background:var(--gray-50);color:var(--gray-800);font-
 .nav-link{font-family:var(--fb);font-size:12px;font-weight:400;color:rgba(255,255,255,0.6);text-decoration:none;padding:15px 13px;white-space:nowrap;transition:color 0.2s;flex-shrink:0;}
 .nav-link:hover{color:white;}
 .hero{background:var(--navy);padding:64px 48px 56px;color:white;}
-.hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(13,148,136,0.2);border:1px solid rgba(13,148,136,0.4);color:var(--teal-mid);font-size:12px;font-weight:500;padding:4px 12px;border-radius:20px;margin-bottom:20px;font-family:var(--fb);}
+.hero-badge{display:inline-flex;align-items:center;gap:6px;background:rgba(13,148,136,0.2);border:1px solid rgba(13,148,136,0.4);color:var(--teal-mid);font-size:12px;font-weight:500;padding:4px 12px;border-radius:20px;margin-bottom:20px;}
 .hero h1{font-family:var(--fh);font-size:44px;font-weight:800;line-height:1.1;margin-bottom:12px;letter-spacing:-1px;}
 .hero h1 span{color:var(--amber);}
 .hero p{font-size:16px;color:rgba(255,255,255,0.6);max-width:560px;margin-bottom:36px;}
 .hero-stats{display:flex;gap:32px;flex-wrap:wrap;}
 .hero-stat-val{font-family:var(--fh);font-size:28px;font-weight:700;color:white;}
 .hero-stat-label{font-size:12px;color:rgba(255,255,255,0.45);margin-top:2px;}
+.hero-stat-sup{font-size:10px;color:var(--teal-mid);vertical-align:super;}
 .hero-stat-div{width:1px;background:rgba(255,255,255,0.12);align-self:stretch;}
 .section{padding:56px 48px;border-bottom:1px solid var(--gray-200);}
 .section:nth-child(even){background:white;}
@@ -49,8 +48,8 @@ body{font-family:var(--fb);background:var(--gray-50);color:var(--gray-800);font-
 .tag-navy{background:#E8EEFF;color:var(--navy);}
 .tag-red{background:var(--red-light);color:#991B1B;}
 .tag-purple{background:var(--purple-light);color:#4C1D95;}
-.tag-green{background:var(--green-light);color:#065F46;}
 .tag-coral{background:var(--coral-light);color:#7C2D12;}
+.tag-gray{background:var(--gray-200);color:var(--gray-600);}
 .section-title{font-family:var(--fh);font-size:30px;font-weight:800;color:var(--gray-900);margin-bottom:6px;letter-spacing:-0.5px;}
 .section-sub{font-size:15px;color:var(--gray-500);max-width:640px;margin-bottom:36px;}
 .card{background:white;border:1px solid var(--gray-200);border-radius:var(--radius-lg);padding:24px;}
@@ -84,8 +83,8 @@ body{font-family:var(--fb);background:var(--gray-50);color:var(--gray-800);font-
 .phase-body{padding:20px 24px;border-top:1px solid var(--gray-100);}
 .phase-features{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:6px 24px;margin-bottom:20px;}
 .phase-features li{font-size:13.5px;color:var(--gray-600);display:flex;align-items:flex-start;gap:8px;line-height:1.4;}
-.phase-features li::before{content:"→";color:var(--teal);font-weight:700;flex-shrink:0;margin-top:1px;}
-.phase-stats{display:flex;gap:24px;padding-top:16px;border-top:1px solid var(--gray-100);}
+.phase-features li::before{content:"\2192";color:var(--teal);font-weight:700;flex-shrink:0;margin-top:1px;}
+.phase-stats{display:flex;gap:24px;padding-top:16px;border-top:1px solid var(--gray-100);flex-wrap:wrap;}
 .phase-stat-val{font-family:var(--fh);font-size:20px;font-weight:800;}
 .phase-stat-label{font-size:12px;color:var(--gray-500);margin-top:2px;}
 .cost-table{width:100%;border-collapse:collapse;font-size:14px;}
@@ -99,7 +98,7 @@ body{font-family:var(--fb);background:var(--gray-50);color:var(--gray-800);font-
 .legal-item h4{font-family:var(--fh);font-size:15px;font-weight:700;color:var(--gray-900);margin-bottom:8px;display:flex;align-items:center;gap:10px;}
 .legal-item ul{list-style:none;margin-top:10px;}
 .legal-item ul li{font-size:13px;color:var(--gray-600);padding:4px 0 4px 16px;position:relative;}
-.legal-item ul li::before{content:"•";position:absolute;left:0;color:var(--gray-400);}
+.legal-item ul li::before{content:"\2022";position:absolute;left:0;color:var(--gray-400);}
 .legal-cost{margin-top:14px;font-size:12.5px;font-weight:600;color:var(--navy);background:#E8EEFF;padding:6px 12px;border-radius:6px;display:inline-block;}
 .callout{border-radius:var(--radius);padding:18px 22px;margin:20px 0;display:flex;gap:14px;align-items:flex-start;}
 .c-teal{background:var(--teal-light);border-left:3px solid var(--teal);}
@@ -122,34 +121,36 @@ body{font-family:var(--fb);background:var(--gray-50);color:var(--gray-800);font-
 .stier-body{padding:16px 20px;background:white;}
 .stier-body ul{list-style:none;}
 .stier-body ul li{font-size:13.5px;color:var(--gray-600);padding:5px 0 5px 20px;position:relative;}
-.stier-body ul li::before{content:"✓";position:absolute;left:0;color:var(--teal);font-weight:700;font-size:12px;}
+.stier-body ul li::before{content:"\2713";position:absolute;left:0;color:var(--teal);font-weight:700;font-size:12px;}
 .mregion{border:1px solid var(--gray-200);border-radius:var(--radius);padding:16px 18px;background:white;}
 .mregion h4{font-family:var(--fh);font-size:14px;font-weight:700;color:var(--gray-900);margin-bottom:8px;}
-.mstat{display:flex;justify-content:space-between;font-size:13px;color:var(--gray-600);padding:3px 0;border-bottom:1px solid var(--gray-100);}
+.mstat{display:flex;justify-content:space-between;font-size:13px;color:var(--gray-600);padding:3px 0;border-bottom:1px solid var(--gray-100);gap:12px;}
 .mstat:last-child{border-bottom:none;}
-.mstat span:last-child{font-weight:600;color:var(--gray-800);}
+.mstat span:last-child{font-weight:600;color:var(--gray-800);text-align:right;}
 .pill{display:inline-flex;align-items:center;gap:5px;padding:4px 12px;border-radius:20px;font-size:12px;font-weight:600;}
 .pill-teal{background:var(--teal-light);color:#065F46;}
 .pill-amber{background:var(--amber-light);color:var(--amber-dark);}
 .pill-navy{background:#E8EEFF;color:var(--navy);}
-.pill-green{background:var(--green-light);color:#065F46;}
 .metric-row{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:24px;}
 .mbox{flex:1;min-width:120px;background:white;border:1px solid var(--gray-200);border-radius:var(--radius);padding:16px;text-align:center;}
 .mbox .val{font-family:var(--fh);font-size:24px;font-weight:800;color:var(--gray-900);}
 .mbox .lbl{font-size:12px;color:var(--gray-400);margin-top:4px;}
+.fnref{font-size:10px;color:var(--teal);vertical-align:super;font-weight:700;text-decoration:none;}
+.est-tag{display:inline-block;background:var(--amber-light);color:var(--amber-dark);font-size:9px;font-weight:700;padding:1px 6px;border-radius:4px;letter-spacing:0.04em;text-transform:uppercase;margin-left:6px;vertical-align:middle;}
+.src-item{padding:12px 0;border-bottom:1px solid var(--gray-100);font-size:12.5px;color:var(--gray-600);line-height:1.5;}
+.src-item:last-child{border-bottom:none;}
+.src-item strong{color:var(--gray-900);font-weight:600;}
+.src-num{display:inline-block;width:22px;height:22px;background:var(--navy);color:white;border-radius:50%;text-align:center;line-height:22px;font-size:11px;font-weight:700;margin-right:8px;flex-shrink:0;}
 footer{background:var(--navy);color:rgba(255,255,255,0.4);text-align:center;padding:28px;font-size:12px;}
 footer strong{color:rgba(255,255,255,0.8);}
 @media(max-width:768px){
-  .hero{padding:40px 24px;}
-  .section{padding:40px 24px;}
+  .hero{padding:40px 24px;}.section{padding:40px 24px;}
   .grid-2,.grid-3,.grid-4{grid-template-columns:1fr;}
-  .phase-features{grid-template-columns:1fr;}
-  .hero h1{font-size:32px;}
+  .phase-features{grid-template-columns:1fr;}.hero h1{font-size:32px;}
 }
 </style>
 </head>
 <body>
-
 <nav class="top-nav">
   <div class="logo">Activ<span>ly</span></div>
   <a href="#exec" class="nav-link">Executive Summary</a>
@@ -164,71 +165,73 @@ footer strong{color:rgba(255,255,255,0.8);}
   <a href="#maintenance" class="nav-link">Post Go-Live</a>
   <a href="#support" class="nav-link">Customer Support</a>
   <a href="#bonus" class="nav-link">Strategic Additions</a>
+  <a href="#sources" class="nav-link">Sources &amp; Assumptions</a>
 </nav>
 
 <div class="hero">
-  <div class="hero-badge">Confidential &nbsp;·&nbsp; Co-founder Strategic Review &nbsp;·&nbsp; May 2025</div>
+  <div class="hero-badge">Confidential &nbsp;&middot;&nbsp; Co-founder Strategic Review &nbsp;&middot;&nbsp; Updated 2025</div>
   <h1>Activly Go-to-Market<br><span>Strategic Business Plan</span></h1>
   <p>A complete playbook for launching, pricing, and scaling the Activly marketplace across Massachusetts and beyond.</p>
   <div class="hero-stats">
-    <div><div class="hero-stat-val">$15–25K</div><div class="hero-stat-label">Estimated launch budget</div></div>
+    <div><div class="hero-stat-val">$15&ndash;25K</div><div class="hero-stat-label">Estimated launch budget <span class="hero-stat-sup">EST</span></div></div>
     <div class="hero-stat-div"></div>
-    <div><div class="hero-stat-val">10 weeks</div><div class="hero-stat-label">MVP target timeline</div></div>
+    <div><div class="hero-stat-val">10 weeks</div><div class="hero-stat-label">MVP target timeline <span class="hero-stat-sup">EST</span></div></div>
     <div class="hero-stat-div"></div>
-    <div><div class="hero-stat-val">1.5M+</div><div class="hero-stat-label">MA children ages 5–17</div></div>
+    <div><div class="hero-stat-val">~900K</div><div class="hero-stat-label">MA children ages 5&ndash;17 <a href="#sources" class="fnref">1</a></div></div>
     <div class="hero-stat-div"></div>
-    <div><div class="hero-stat-val">~70%</div><div class="hero-stat-label">Dev hours replaced by AI tooling</div></div>
+    <div><div class="hero-stat-val">~70%</div><div class="hero-stat-label">Dev hours replaced by AI tooling <span class="hero-stat-sup">EST</span></div></div>
     <div class="hero-stat-div"></div>
-    <div><div class="hero-stat-val">$800M+</div><div class="hero-stat-label">MA after-school market</div></div>
+    <div><div class="hero-stat-val">1.1M+</div><div class="hero-stat-label">MA children under 18 <a href="#sources" class="fnref">1</a></div></div>
   </div>
 </div>
 
 <!-- 01 EXECUTIVE SUMMARY -->
 <section id="exec" class="section">
-  <div class="section-tag tag-navy">01 — Overview</div>
+  <div class="section-tag tag-navy">01 &mdash; Overview</div>
   <h2 class="section-title">Executive Summary</h2>
   <p class="section-sub">The market opportunity, the platform thesis, and how Activly wins a space no one has built correctly yet.</p>
   <div class="grid-3" style="margin-bottom:24px;">
     <div class="card">
-      <div style="font-size:26px;margin-bottom:12px;">🎯</div>
+      <div style="font-size:26px;margin-bottom:12px;">&#127919;</div>
       <div class="card-title">The Problem</div>
       <p style="font-size:13.5px;color:var(--gray-500);line-height:1.6;">Parents spend hours across Facebook Groups, school flyers, and disconnected websites searching for vetted after-school programs. Organizers have no unified, modern place to list and collect payment. No trusted, CORI-verified marketplace exists for youth enrichment in Massachusetts.</p>
     </div>
     <div class="card">
-      <div style="font-size:26px;margin-bottom:12px;">💡</div>
+      <div style="font-size:26px;margin-bottom:12px;">&#128161;</div>
       <div class="card-title">The Solution</div>
-      <p style="font-size:13.5px;color:var(--gray-500);line-height:1.6;">Activly is a Ticketmaster-style marketplace where families discover, enroll in, and pay for after-school and enrichment programs — with CORI-verified instructors, one-click COPPA-compliant enrollment, and a mobile-first experience that sets a new standard for the category.</p>
+      <p style="font-size:13.5px;color:var(--gray-500);line-height:1.6;">Activly is a Ticketmaster-style marketplace where families discover, enroll in, and pay for after-school and enrichment programs &mdash; with CORI-verified instructors, one-click COPPA-compliant enrollment, and a mobile-first experience that sets a new standard for the category.</p>
     </div>
     <div class="card">
-      <div style="font-size:26px;margin-bottom:12px;">🚀</div>
+      <div style="font-size:26px;margin-bottom:12px;">&#128640;</div>
       <div class="card-title">The Opportunity</div>
-      <p style="font-size:13.5px;color:var(--gray-500);line-height:1.6;">Massachusetts has 1.5M+ school-age children and an estimated $800M+ annual spend on enrichment programs. No dominant local marketplace exists. The closest competitor (Sawyer) charges $79–149/mo with no CORI integration — leaving a clear gap for a trust-first, MA-native platform.</p>
+      <p style="font-size:13.5px;color:var(--gray-500);line-height:1.6;">Massachusetts has roughly 900K children ages 5&ndash;17 <a href="#sources" class="fnref">1</a> and a large, fragmented enrichment-spending base <span class="est-tag">Internal Est.</span> <a href="#sources" class="fnref">2</a>. No dominant local marketplace exists. The closest competitor, Sawyer, starts around $129/mo with no CORI integration <a href="#sources" class="fnref">3</a> &mdash; leaving a clear gap for a trust-first, MA-native platform.</p>
     </div>
   </div>
   <div class="callout c-teal">
-    <div class="ci">✅</div>
-    <div class="ct"><strong>Platform thesis:</strong> Win Massachusetts deeply before expanding. Become the definitive marketplace for youth enrichment in New England — with hyper-local trust, exceptional UX, and CORI verification as a structural moat that competitors cannot quickly replicate. Commission revenue scales with enrollment volume while SaaS creates predictable ARR.</div>
+    <div class="ci">&#9989;</div>
+    <div class="ct"><strong>Platform thesis:</strong> Win Massachusetts deeply before expanding. Become the definitive marketplace for youth enrichment in New England &mdash; with hyper-local trust, exceptional UX, and CORI verification as a structural moat that competitors cannot quickly replicate. Commission revenue scales with enrollment volume while SaaS creates predictable ARR.</div>
   </div>
   <div class="grid-2" style="margin-top:24px;">
     <div>
-      <h4 style="font-family:var(--fh);font-size:14px;color:var(--gray-700);margin-bottom:12px;text-transform:uppercase;letter-spacing:0.06em;">Competitive Landscape</h4>
+      <h4 style="font-family:var(--fh);font-size:14px;color:var(--gray-700);margin-bottom:12px;text-transform:uppercase;letter-spacing:0.06em;">Competitive Landscape <a href="#sources" class="fnref">3</a></h4>
       <table class="cost-table">
         <thead><tr><th>Competitor</th><th>Model</th><th>CORI</th><th>MA Focus</th></tr></thead>
         <tbody>
-          <tr><td><strong>Sawyer</strong></td><td>SaaS $79–149/mo</td><td class="dsh">✗</td><td class="dsh">✗</td></tr>
-          <tr><td><strong>ActivityHero</strong></td><td>3–5% commission</td><td class="dsh">✗</td><td class="dsh">✗</td></tr>
-          <tr><td><strong>Jumbula</strong></td><td>Registration tool</td><td class="dsh">✗</td><td class="dsh">✗</td></tr>
-          <tr><td><strong>School flyers</strong></td><td>Free, unvetted</td><td class="dsh">✗</td><td class="chk">Local</td></tr>
-          <tr><td><strong style="color:var(--teal);">Activly ⭐</strong></td><td>Commission + SaaS</td><td class="chk">✓</td><td class="chk">✓</td></tr>
+          <tr><td><strong>Sawyer</strong></td><td>SaaS, from ~$129/mo</td><td class="dsh">&#10007;</td><td class="dsh">&#10007;</td></tr>
+          <tr><td><strong>ActivityHero</strong></td><td>Subscription + performance tiers</td><td class="dsh">&#10007;</td><td class="dsh">&#10007;</td></tr>
+          <tr><td><strong>Jumbula</strong></td><td>Registration tool</td><td class="dsh">&#10007;</td><td class="dsh">&#10007;</td></tr>
+          <tr><td><strong>School flyers</strong></td><td>Free, unvetted</td><td class="dsh">&#10007;</td><td class="chk">Local</td></tr>
+          <tr><td><strong style="color:var(--teal);">Activly &#11088;</strong></td><td>Commission + SaaS</td><td class="chk">&#10003;</td><td class="chk">&#10003;</td></tr>
         </tbody>
       </table>
+      <p style="font-size:11px;color:var(--gray-400);margin-top:8px;">Competitor pricing and models as published, 2025. Verify before any external use &mdash; vendor pricing changes frequently.</p>
     </div>
     <div>
       <h4 style="font-family:var(--fh);font-size:14px;color:var(--gray-700);margin-bottom:12px;text-transform:uppercase;letter-spacing:0.06em;">Core Differentiators</h4>
       <div style="display:flex;flex-direction:column;gap:10px;">
-        <div class="callout c-teal" style="margin:0;padding:12px 16px;"><div class="ct"><strong>CORI-verified instructors</strong> — every contact checked individually per MA law. No competitor does this at the platform level.</div></div>
-        <div class="callout c-amber" style="margin:0;padding:12px 16px;"><div class="ct"><strong>COPPA-first design</strong> — parent accounts, child data protection, one-click deletion. Trust is built in, not bolted on.</div></div>
-        <div class="callout c-navy" style="margin:0;padding:12px 16px;"><div class="ct"><strong>Mobile-first, premium UX</strong> — haptic feedback, micro-interactions, modern typography. A platform parents want to share.</div></div>
+        <div class="callout c-teal" style="margin:0;padding:12px 16px;"><div class="ct"><strong>CORI-verified instructors</strong> &mdash; every contact checked individually per MA law. No competitor does this at the platform level.</div></div>
+        <div class="callout c-amber" style="margin:0;padding:12px 16px;"><div class="ct"><strong>COPPA-first design</strong> &mdash; parent accounts, child data protection, one-click deletion, aligned to the 2025 amended COPPA Rule. Trust is built in, not bolted on.</div></div>
+        <div class="callout c-navy" style="margin:0;padding:12px 16px;"><div class="ct"><strong>Mobile-first, premium UX</strong> &mdash; haptic feedback, micro-interactions, modern typography. A platform parents want to share.</div></div>
       </div>
     </div>
   </div>
@@ -236,183 +239,154 @@ footer strong{color:rgba(255,255,255,0.8);}
 
 <!-- 02 REVENUE MODEL -->
 <section id="revenue" class="section">
-  <div class="section-tag tag-teal">02 — Revenue</div>
+  <div class="section-tag tag-teal">02 &mdash; Revenue</div>
   <h2 class="section-title">Revenue Model</h2>
   <p class="section-sub">A phased revenue stack that begins friction-free at launch and layers in higher-margin streams as organizer trust and platform volume grow.</p>
   <div class="grid-3" style="margin-bottom:20px;">
     <div class="rev-card featured">
-      <div style="position:absolute;top:-10px;right:16px;"><span class="badge-rec">Phase 1 — Launch</span></div>
-      <div class="rev-icon" style="background:var(--teal-light);">💳</div>
+      <div style="position:absolute;top:-10px;right:16px;"><span class="badge-rec">Phase 1 &mdash; Launch</span></div>
+      <div class="rev-icon" style="background:var(--teal-light);">&#128179;</div>
       <h3>Transaction Commission</h3>
-      <p>4–5% on every enrollment processed through Activly. Families pay a 1.5% convenience fee; organizers absorb the remainder. Zero barrier to organizer onboarding.</p>
-      <span class="est">$4–5 per $100 enrollment</span>
+      <p>4&ndash;5% on every enrollment processed through Activly. Families pay a 1.5% convenience fee; organizers absorb the remainder. Zero barrier to organizer onboarding.</p>
+      <span class="est">$4&ndash;5 per $100 enrollment</span>
     </div>
     <div class="rev-card featured">
-      <div style="position:absolute;top:-10px;right:16px;"><span class="badge-rec">Phase 2 — Month 6</span></div>
-      <div class="rev-icon" style="background:#E8EEFF;">📦</div>
+      <div style="position:absolute;top:-10px;right:16px;"><span class="badge-rec">Phase 2 &mdash; Month 6</span></div>
+      <div class="rev-icon" style="background:#E8EEFF;">&#128230;</div>
       <h3>Organizer SaaS Tiers</h3>
-      <p>Monthly subscription tiers (Spark free → Grow $49 → Scale $99) unlocking unlimited listings, reduced commission rates, analytics, and managed CORI tools.</p>
-      <span class="est">$49–99 per organizer/mo</span>
+      <p>Monthly subscription tiers (Spark free &rarr; Grow $49 &rarr; Scale $99) unlocking unlimited listings, reduced commission rates, analytics, and managed CORI tools.</p>
+      <span class="est">$49&ndash;99 per organizer/mo</span>
     </div>
     <div class="rev-card">
-      <div style="position:absolute;top:-10px;right:16px;"><span class="badge-alt">Phase 2 — Month 6</span></div>
-      <div class="rev-icon" style="background:var(--amber-light);">⭐</div>
+      <div style="position:absolute;top:-10px;right:16px;"><span class="badge-alt">Phase 2 &mdash; Month 6</span></div>
+      <div class="rev-icon" style="background:var(--amber-light);">&#11088;</div>
       <h3>Featured Listings</h3>
-      <p>Organizers pay $29–79/mo to appear at the top of category searches and be featured in family digest emails. Pure margin — no per-transaction overhead.</p>
-      <span class="est">$29–79 per listing/mo</span>
+      <p>Organizers pay $29&ndash;79/mo to appear at the top of category searches and be featured in family digest emails. Pure margin &mdash; no per-transaction overhead.</p>
+      <span class="est">$29&ndash;79 per listing/mo</span>
     </div>
     <div class="rev-card">
-      <div style="position:absolute;top:-10px;right:16px;"><span class="badge-alt">Phase 2 — Month 9</span></div>
-      <div class="rev-icon" style="background:var(--coral-light);">🔍</div>
+      <div style="position:absolute;top:-10px;right:16px;"><span class="badge-alt">Phase 2 &mdash; Month 9</span></div>
+      <div class="rev-icon" style="background:var(--coral-light);">&#128269;</div>
       <h3>CORI Check Pass-Through</h3>
-      <p>Charge organizers $39/person for background checks (Checkr wholesale cost: $29–35). Each new instructor is incremental revenue. Builds stickiness and trust simultaneously.</p>
-      <span class="est">$5–10 margin per check</span>
+      <p>Charge organizers $39/person for background checks (Checkr wholesale cost: $29&ndash;35 <a href="#sources" class="fnref">4</a>). Each new instructor is incremental revenue. Builds stickiness and trust simultaneously.</p>
+      <span class="est">$5&ndash;10 margin per check</span>
     </div>
     <div class="rev-card">
-      <div style="position:absolute;top:-10px;right:16px;"><span class="badge-alt">Phase 3 — Year 2</span></div>
-      <div class="rev-icon" style="background:var(--purple-light);">🏫</div>
+      <div style="position:absolute;top:-10px;right:16px;"><span class="badge-alt">Phase 3 &mdash; Year 2</span></div>
+      <div class="rev-icon" style="background:var(--purple-light);">&#127979;</div>
       <h3>School District Licensing</h3>
-      <p>Annual B2B licenses ($500–2,500/yr) for districts to surface vetted Activly programs through a white-label parent portal. Long sales cycles — start conversations at Month 3.</p>
-      <span class="est">$1K–2.5K per district/yr</span>
+      <p>Annual B2B licenses ($500&ndash;2,500/yr) for districts to surface vetted Activly programs through a white-label parent portal. Long sales cycles &mdash; start conversations at Month 3.</p>
+      <span class="est">$1K&ndash;2.5K per district/yr</span>
     </div>
     <div class="rev-card">
-      <div style="position:absolute;top:-10px;right:16px;"><span class="badge-alt">Phase 3 — Year 2</span></div>
-      <div class="rev-icon" style="background:var(--green-light);">👨‍👩‍👧</div>
+      <div style="position:absolute;top:-10px;right:16px;"><span class="badge-alt">Phase 3 &mdash; Year 2</span></div>
+      <div class="rev-icon" style="background:var(--green-light);">&#128104;&#8205;&#128105;&#8205;&#128103;</div>
       <h3>Family Premium</h3>
       <p>$7.99/mo for families: early enrollment access, saved program history, activity report card, and exclusive Founding Organizer deals. Unlocks a recurring family-side revenue stream.</p>
       <span class="est">$8 per family/mo</span>
     </div>
   </div>
   <div class="callout c-amber">
-    <div class="ci">💡</div>
-    <div class="ct"><strong>Recommended rollout sequence:</strong> Launch with commission only — no SaaS barrier, maximum organizer adoption. Introduce SaaS tiers and featured listings at Month 6 once organizers have seen real enrollment volume. Pursue district licensing contracts in parallel from Month 3 (procurement cycles are 6–12 months). Family premium launches in Year 2 once the consumer user base is established.</div>
+    <div class="ci">&#128161;</div>
+    <div class="ct"><strong>Recommended rollout sequence:</strong> Launch with commission only &mdash; no SaaS barrier, maximum organizer adoption. Introduce SaaS tiers and featured listings at Month 6 once organizers have seen real enrollment volume. Pursue district licensing contracts in parallel from Month 3 (procurement cycles are 6&ndash;12 months). Family premium launches in Year 2 once the consumer user base is established.</div>
   </div>
   <div style="margin-top:24px;">
-    <h3 style="font-family:var(--fh);font-size:17px;font-weight:700;margin-bottom:16px;">Year 1 Revenue Projections</h3>
+    <h3 style="font-family:var(--fh);font-size:17px;font-weight:700;margin-bottom:16px;">Year 1 Revenue Projections <span class="est-tag">Modeled</span></h3>
     <div class="grid-4">
       <div class="mbox"><div class="val" style="color:var(--teal);">$0</div><div class="lbl">Month 1 MRR</div></div>
-      <div class="mbox"><div class="val" style="color:var(--amber);">$2–5K</div><div class="lbl">Month 3 MRR</div></div>
-      <div class="mbox"><div class="val" style="color:var(--coral);">$8–15K</div><div class="lbl">Month 6 MRR</div></div>
-      <div class="mbox"><div class="val" style="color:var(--navy);">$25–40K</div><div class="lbl">Month 12 MRR</div></div>
+      <div class="mbox"><div class="val" style="color:var(--amber);">$2&ndash;5K</div><div class="lbl">Month 3 MRR</div></div>
+      <div class="mbox"><div class="val" style="color:var(--coral);">$8&ndash;15K</div><div class="lbl">Month 6 MRR</div></div>
+      <div class="mbox"><div class="val" style="color:var(--navy);">$25&ndash;40K</div><div class="lbl">Month 12 MRR</div></div>
     </div>
-    <p style="font-size:12px;color:var(--gray-400);margin-top:8px;">Assumptions: 50 organizers at launch, avg. 4 programs each, avg. $250 enrollment, 60% fill rate at 10 students per program. Month 6+ includes SaaS revenue from Grow/Scale tier conversion.</p>
+    <p style="font-size:12px;color:var(--gray-400);margin-top:8px;">Modeled projection, not a forecast. Assumptions: 50 organizers at launch, avg. 4 programs each, avg. $250 enrollment, 60% fill rate at 10 students per program. Month 6+ includes SaaS revenue from Grow/Scale tier conversion. Actual results depend on supply-side recruitment and family demand, both unproven pre-launch. See <a href="#sources" class="fnref">Sources &amp; Assumptions</a>.</p>
   </div>
 </section>
 
 <!-- 03 MARKET PENETRATION -->
 <section id="penetration" class="section">
-  <div class="section-tag tag-amber">03 — Go-to-Market</div>
+  <div class="section-tag tag-amber">03 &mdash; Go-to-Market</div>
   <h2 class="section-title">Market Penetration Strategy</h2>
   <p class="section-sub">Supply-side first. Organizers and programs must be live before families are invited. The marketplace chicken-and-egg problem is solved by sequence, not simultaneity.</p>
   <div class="callout c-navy" style="margin-bottom:28px;">
-    <div class="ci">🔑</div>
-    <div class="ct"><strong>The core sequence:</strong> Recruit 50+ organizers with 150+ programs listed before opening the platform to families. Target organizer-ready status by Week 8. Families arrive to a full marketplace — not an empty one.</div>
+    <div class="ci">&#128273;</div>
+    <div class="ct"><strong>The core sequence:</strong> Recruit 50+ organizers with 150+ programs listed before opening the platform to families. Target organizer-ready status by Week 8. Families arrive to a full marketplace &mdash; not an empty one.</div>
   </div>
   <div class="grid-2" style="margin-bottom:28px;">
     <div>
-      <h3 style="font-family:var(--fh);font-size:18px;font-weight:700;margin-bottom:16px;">🏆 Founding Organizer Program</h3>
+      <h3 style="font-family:var(--fh);font-size:18px;font-weight:700;margin-bottom:16px;">&#127942; Founding Organizer Program</h3>
       <p style="font-size:14px;color:var(--gray-500);margin-bottom:16px;">The first 100 organizers receive permanent benefits designed to reward early commitment and drive word-of-mouth within the organizer community.</p>
       <div style="display:flex;flex-direction:column;gap:10px;">
-        <div style="background:white;border:1px solid var(--gray-200);border-left:3px solid var(--teal);border-radius:var(--radius);padding:14px 16px;">
-          <div style="font-weight:700;font-size:13.5px;color:var(--gray-900);">0% transaction fee for 6 months</div>
-          <div style="font-size:12.5px;color:var(--gray-500);margin-top:3px;">Followed by 2% for months 7–12 vs. the standard 5%. A significant financial incentive to list early.</div>
-        </div>
-        <div style="background:white;border:1px solid var(--gray-200);border-left:3px solid var(--teal);border-radius:var(--radius);padding:14px 16px;">
-          <div style="font-weight:700;font-size:13.5px;color:var(--gray-900);">Grow tier free for 12 months ($49/mo value)</div>
-          <div style="font-size:12.5px;color:var(--gray-500);margin-top:3px;">Unlimited programs, full analytics, and managed CORI tools at no cost. Projected 50% paid conversion at Month 13.</div>
-        </div>
-        <div style="background:white;border:1px solid var(--gray-200);border-left:3px solid var(--amber);border-radius:var(--radius);padding:14px 16px;">
-          <div style="font-weight:700;font-size:13.5px;color:var(--gray-900);">"Founding Organizer" badge — permanent</div>
-          <div style="font-size:12.5px;color:var(--gray-500);margin-top:3px;">Displayed on all program listings. Featured on homepage for first 60 days. Early roadmap input access.</div>
-        </div>
-        <div style="background:white;border:1px solid var(--gray-200);border-left:3px solid var(--amber);border-radius:var(--radius);padding:14px 16px;">
-          <div style="font-weight:700;font-size:13.5px;color:var(--gray-900);">1:1 onboarding call with a co-founder</div>
-          <div style="font-size:12.5px;color:var(--gray-500);margin-top:3px;">30-minute setup session. Personal attention drives retention and referrals more effectively than any discount.</div>
-        </div>
+        <div style="background:white;border:1px solid var(--gray-200);border-left:3px solid var(--teal);border-radius:var(--radius);padding:14px 16px;"><div style="font-weight:700;font-size:13.5px;color:var(--gray-900);">0% transaction fee for 6 months</div><div style="font-size:12.5px;color:var(--gray-500);margin-top:3px;">Followed by 2% for months 7&ndash;12 vs. the standard 5%. A significant financial incentive to list early.</div></div>
+        <div style="background:white;border:1px solid var(--gray-200);border-left:3px solid var(--teal);border-radius:var(--radius);padding:14px 16px;"><div style="font-weight:700;font-size:13.5px;color:var(--gray-900);">Grow tier free for 12 months ($49/mo value)</div><div style="font-size:12.5px;color:var(--gray-500);margin-top:3px;">Unlimited programs, full analytics, and managed CORI tools at no cost. Projected 50% paid conversion at Month 13 <span class="est-tag">Assumption</span></div></div>
+        <div style="background:white;border:1px solid var(--gray-200);border-left:3px solid var(--amber);border-radius:var(--radius);padding:14px 16px;"><div style="font-weight:700;font-size:13.5px;color:var(--gray-900);">"Founding Organizer" badge &mdash; permanent</div><div style="font-size:12.5px;color:var(--gray-500);margin-top:3px;">Displayed on all program listings. Featured on homepage for first 60 days. Early roadmap input access.</div></div>
+        <div style="background:white;border:1px solid var(--gray-200);border-left:3px solid var(--amber);border-radius:var(--radius);padding:14px 16px;"><div style="font-weight:700;font-size:13.5px;color:var(--gray-900);">1:1 onboarding call with a co-founder</div><div style="font-size:12.5px;color:var(--gray-500);margin-top:3px;">30-minute setup session. Personal attention drives retention and referrals more effectively than any discount.</div></div>
       </div>
     </div>
     <div>
-      <h3 style="font-family:var(--fh);font-size:18px;font-weight:700;margin-bottom:16px;">👪 Family Acquisition</h3>
+      <h3 style="font-family:var(--fh);font-size:18px;font-weight:700;margin-bottom:16px;">&#128106; Family Acquisition</h3>
       <p style="font-size:14px;color:var(--gray-500);margin-bottom:16px;">Families always browse and enroll for free. Growth is driven by organic content, community relationships, and a referral program that turns enrolled families into recruiters.</p>
       <div style="display:flex;flex-direction:column;gap:10px;">
-        <div style="background:white;border:1px solid var(--gray-200);border-left:3px solid var(--navy);border-radius:var(--radius);padding:14px 16px;">
-          <div style="font-weight:700;font-size:13.5px;color:var(--gray-900);">Hyperlocal SEO — 50+ MA town pages</div>
-          <div style="font-size:12.5px;color:var(--gray-500);margin-top:3px;">Dedicated pages for searches like "after-school programs in Newton MA" and "soccer programs in Brookline MA." Organic traffic from day one.</div>
-        </div>
-        <div style="background:white;border:1px solid var(--gray-200);border-left:3px solid var(--navy);border-radius:var(--radius);padding:14px 16px;">
-          <div style="font-weight:700;font-size:13.5px;color:var(--gray-900);">School newsletter partnerships</div>
-          <div style="font-size:12.5px;color:var(--gray-500);margin-top:3px;">Approach PTAs and school administrators to include Activly as a community resource — not a paid ad. Target: 20 schools in the first 60 days.</div>
-        </div>
-        <div style="background:white;border:1px solid var(--gray-200);border-left:3px solid var(--navy);border-radius:var(--radius);padding:14px 16px;">
-          <div style="font-weight:700;font-size:13.5px;color:var(--gray-900);">Referral program — $10 family credit</div>
-          <div style="font-size:12.5px;color:var(--gray-500);margin-top:3px;">Families earn $10 when a referred parent completes their first enrollment. Organizers earn $25 per referred organizer who lists a program.</div>
-        </div>
-        <div style="background:white;border:1px solid var(--gray-200);border-left:3px solid var(--navy);border-radius:var(--radius);padding:14px 16px;">
-          <div style="font-weight:700;font-size:13.5px;color:var(--gray-900);">Paid social — $500–1,000/mo</div>
-          <div style="font-size:12.5px;color:var(--gray-500);margin-top:3px;">Facebook and Instagram targeting MA parents of school-age children. CAC target under $15/family. Scale spend after confirming ROAS.</div>
-        </div>
+        <div style="background:white;border:1px solid var(--gray-200);border-left:3px solid var(--navy);border-radius:var(--radius);padding:14px 16px;"><div style="font-weight:700;font-size:13.5px;color:var(--gray-900);">Hyperlocal SEO &mdash; 50+ MA town pages</div><div style="font-size:12.5px;color:var(--gray-500);margin-top:3px;">Dedicated pages for searches like "after-school programs in Newton MA" and "soccer programs in Brookline MA." Organic traffic from day one.</div></div>
+        <div style="background:white;border:1px solid var(--gray-200);border-left:3px solid var(--navy);border-radius:var(--radius);padding:14px 16px;"><div style="font-weight:700;font-size:13.5px;color:var(--gray-900);">School newsletter partnerships</div><div style="font-size:12.5px;color:var(--gray-500);margin-top:3px;">Approach PTAs and school administrators to include Activly as a community resource &mdash; not a paid ad. Target: 20 schools in the first 60 days.</div></div>
+        <div style="background:white;border:1px solid var(--gray-200);border-left:3px solid var(--navy);border-radius:var(--radius);padding:14px 16px;"><div style="font-weight:700;font-size:13.5px;color:var(--gray-900);">Referral program &mdash; $10 family credit</div><div style="font-size:12.5px;color:var(--gray-500);margin-top:3px;">Families earn $10 when a referred parent completes their first enrollment. Organizers earn $25 per referred organizer who lists a program.</div></div>
+        <div style="background:white;border:1px solid var(--gray-200);border-left:3px solid var(--navy);border-radius:var(--radius);padding:14px 16px;"><div style="font-weight:700;font-size:13.5px;color:var(--gray-900);">Paid social &mdash; $500&ndash;1,000/mo</div><div style="font-size:12.5px;color:var(--gray-500);margin-top:3px;">Facebook and Instagram targeting MA parents of school-age children. CAC target under $15/family <span class="est-tag">Assumption</span> Scale spend after confirming ROAS.</div></div>
       </div>
     </div>
   </div>
-  <h3 style="font-family:var(--fh);font-size:18px;font-weight:700;margin-bottom:16px;">📅 Organizer Outreach Channels — Weeks 1–8</h3>
+  <h3 style="font-family:var(--fh);font-size:18px;font-weight:700;margin-bottom:16px;">&#128197; Organizer Outreach Channels &mdash; Weeks 1&ndash;8</h3>
   <div class="grid-3">
-    <div class="mregion">
-      <h4>Channel 1: Cold Email Outreach</h4>
+    <div class="mregion"><h4>Channel 1: Cold Email Outreach</h4>
       <div class="mstat"><span>Target contacts</span><span>500/week</span></div>
-      <div class="mstat"><span>Open rate target</span><span>25–35%</span></div>
-      <div class="mstat"><span>Reply rate target</span><span>5–8%</span></div>
+      <div class="mstat"><span>Open rate target</span><span>25&ndash;35%</span></div>
+      <div class="mstat"><span>Reply rate target</span><span>5&ndash;8%</span></div>
       <div class="mstat"><span>Tooling</span><span>Apollo.io / Hunter.io</span></div>
       <div class="mstat"><span>Monthly cost</span><span>~$50/mo</span></div>
     </div>
-    <div class="mregion">
-      <h4>Channel 2: Institutional Networks</h4>
-      <div class="mstat"><span>MA YMCA branches</span><span>15 locations</span></div>
+    <div class="mregion"><h4>Channel 2: Institutional Networks</h4>
+      <div class="mstat"><span>MA YMCA branches</span><span>15+ locations</span></div>
       <div class="mstat"><span>Boys &amp; Girls Clubs MA</span><span>30+ clubs</span></div>
-      <div class="mstat"><span>MA Rec Departments</span><span>351 towns</span></div>
+      <div class="mstat"><span>MA Rec Departments</span><span>351 towns <a href="#sources" class="fnref">5</a></span></div>
       <div class="mstat"><span>MA PTA chapters</span><span>Target 25</span></div>
       <div class="mstat"><span>Community centers</span><span>Target 40</span></div>
     </div>
-    <div class="mregion">
-      <h4>Channel 3: Community Events</h4>
-      <div class="mstat"><span>Events per month</span><span>2–3</span></div>
-      <div class="mstat"><span>Farmers markets / fairs</span><span>May–Aug peak</span></div>
-      <div class="mstat"><span>School activity fairs</span><span>Sept–Oct peak</span></div>
-      <div class="mstat"><span>Budget per event</span><span>$50–200</span></div>
+    <div class="mregion"><h4>Channel 3: Community Events</h4>
+      <div class="mstat"><span>Events per month</span><span>2&ndash;3</span></div>
+      <div class="mstat"><span>Farmers markets / fairs</span><span>May&ndash;Aug peak</span></div>
+      <div class="mstat"><span>School activity fairs</span><span>Sept&ndash;Oct peak</span></div>
+      <div class="mstat"><span>Budget per event</span><span>$50&ndash;200</span></div>
       <div class="mstat"><span>Goal per event</span><span>5+ signups</span></div>
     </div>
   </div>
   <div class="callout c-green" style="margin-top:24px;">
-    <div class="ci">🎯</div>
+    <div class="ci">&#127919;</div>
     <div class="ct"><strong>Pre-build validation milestone:</strong> Before writing any application code, build a one-page landing page (Typedream or Carrd, free) and email 200 MA program directors with the Founding Organizer offer. Target: 30 signed letters of interest within 2 weeks. 30+ LOIs = green light to build. Under 15 = revisit positioning first.</div>
   </div>
 </section>
 
 <!-- 04 PRICING -->
 <section id="pricing" class="section">
-  <div class="section-tag tag-navy">04 — Pricing</div>
+  <div class="section-tag tag-navy">04 &mdash; Pricing</div>
   <h2 class="section-title">Pricing Strategy</h2>
-  <p class="section-sub">A three-tier organizer SaaS model with commission discounts at higher tiers. Families pay nothing to browse — only a small convenience fee at checkout.</p>
+  <p class="section-sub">A three-tier organizer SaaS model with commission discounts at higher tiers. Families pay nothing to browse &mdash; only a small convenience fee at checkout.</p>
   <div style="overflow-x:auto;margin-bottom:24px;">
     <table class="pricing-table" style="min-width:620px;">
-      <thead>
-        <tr>
-          <th style="width:28%;">Feature</th>
-          <th>⚡ Spark<br><span class="price-val">Free</span></th>
-          <th class="hl">🌱 Grow <span class="badge-rec">Most Popular</span><br><span class="price-val" style="color:white;">$49</span><span class="price-period">/mo</span></th>
-          <th>🚀 Scale<br><span class="price-val">$99</span><span class="price-period">/mo</span></th>
-        </tr>
-      </thead>
+      <thead><tr>
+        <th style="width:28%;">Feature</th>
+        <th>&#9889; Spark<br><span class="price-val">Free</span></th>
+        <th class="hl">&#127793; Grow <span class="badge-rec">Most Popular</span><br><span class="price-val" style="color:white;">$49</span><span class="price-period">/mo</span></th>
+        <th>&#128640; Scale<br><span class="price-val">$99</span><span class="price-period">/mo</span></th>
+      </tr></thead>
       <tbody>
         <tr><td>Active programs</td><td>2</td><td class="hl">Unlimited</td><td>Unlimited</td></tr>
         <tr><td>Transaction fee</td><td>5%</td><td class="hl">3%</td><td>2%</td></tr>
         <tr><td>Enrollment analytics</td><td>Basic</td><td class="hl">Full dashboard</td><td>Advanced + export</td></tr>
         <tr><td>CORI management</td><td>Manual upload</td><td class="hl">Managed integration</td><td>Managed + auto-alerts</td></tr>
-        <tr><td>Email notifications</td><td><span class="chk">✓</span></td><td class="hl"><span class="chk">✓</span></td><td><span class="chk">✓</span></td></tr>
-        <tr><td>Waitlist management</td><td><span class="dsh">—</span></td><td class="hl"><span class="chk">✓</span></td><td><span class="chk">✓</span></td></tr>
-        <tr><td>Reviews &amp; ratings</td><td><span class="dsh">—</span></td><td class="hl"><span class="chk">✓</span></td><td><span class="chk">✓</span></td></tr>
-        <tr><td>Multi-location listings</td><td><span class="dsh">—</span></td><td class="hl"><span class="dsh">—</span></td><td><span class="chk">✓</span></td></tr>
-        <tr><td>Custom branding</td><td><span class="dsh">—</span></td><td class="hl"><span class="dsh">—</span></td><td><span class="chk">✓</span></td></tr>
-        <tr><td>Priority support</td><td><span class="dsh">—</span></td><td class="hl"><span class="chk">✓</span></td><td>Dedicated CSM</td></tr>
+        <tr><td>Email notifications</td><td><span class="chk">&#10003;</span></td><td class="hl"><span class="chk">&#10003;</span></td><td><span class="chk">&#10003;</span></td></tr>
+        <tr><td>Waitlist management</td><td><span class="dsh">&mdash;</span></td><td class="hl"><span class="chk">&#10003;</span></td><td><span class="chk">&#10003;</span></td></tr>
+        <tr><td>Reviews &amp; ratings</td><td><span class="dsh">&mdash;</span></td><td class="hl"><span class="chk">&#10003;</span></td><td><span class="chk">&#10003;</span></td></tr>
+        <tr><td>Multi-location listings</td><td><span class="dsh">&mdash;</span></td><td class="hl"><span class="dsh">&mdash;</span></td><td><span class="chk">&#10003;</span></td></tr>
+        <tr><td>Custom branding</td><td><span class="dsh">&mdash;</span></td><td class="hl"><span class="dsh">&mdash;</span></td><td><span class="chk">&#10003;</span></td></tr>
+        <tr><td>Priority support</td><td><span class="dsh">&mdash;</span></td><td class="hl"><span class="chk">&#10003;</span></td><td>Dedicated CSM</td></tr>
         <tr><td>Annual billing discount</td><td>N/A</td><td class="hl">2 months free ($490/yr)</td><td>2 months free ($990/yr)</td></tr>
       </tbody>
     </table>
@@ -421,24 +395,12 @@ footer strong{color:rgba(255,255,255,0.8);}
     <div>
       <h3 style="font-family:var(--fh);font-size:17px;font-weight:700;margin-bottom:14px;">Family Checkout Fee Structure</h3>
       <div style="background:white;border:1px solid var(--gray-200);border-radius:var(--radius-lg);padding:20px;">
-        <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--gray-100);">
-          <span style="font-size:14px;color:var(--gray-600);">Program price (example)</span>
-          <span style="font-weight:700;">$200.00</span>
-        </div>
-        <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--gray-100);">
-          <span style="font-size:14px;color:var(--gray-600);">Activly platform fee (1.5%)</span>
-          <span style="font-weight:700;">$3.00</span>
-        </div>
-        <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--gray-100);">
-          <span style="font-size:13px;color:var(--gray-400);">Stripe processing (absorbed by organizer)</span>
-          <span style="font-size:13px;color:var(--gray-400);">$6.10</span>
-        </div>
-        <div style="display:flex;justify-content:space-between;align-items:center;padding:12px 0 0;">
-          <span style="font-weight:700;font-size:15px;">Family total</span>
-          <span style="font-weight:800;font-size:18px;color:var(--navy);">$203.00</span>
-        </div>
+        <div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--gray-100);"><span style="font-size:14px;color:var(--gray-600);">Program price (example)</span><span style="font-weight:700;">$200.00</span></div>
+        <div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--gray-100);"><span style="font-size:14px;color:var(--gray-600);">Activly platform fee (1.5%)</span><span style="font-weight:700;">$3.00</span></div>
+        <div style="display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid var(--gray-100);"><span style="font-size:13px;color:var(--gray-400);">Payment processing (absorbed by organizer) <a href="#sources" class="fnref">6</a></span><span style="font-size:13px;color:var(--gray-400);">~$6.10</span></div>
+        <div style="display:flex;justify-content:space-between;padding:12px 0 0;"><span style="font-weight:700;font-size:15px;">Family total</span><span style="font-weight:800;font-size:18px;color:var(--navy);">$203.00</span></div>
       </div>
-      <p style="font-size:12px;color:var(--gray-400);margin-top:8px;">Net to organizer on a $200 program at Grow tier (3% commission): approximately $184 after Activly and Stripe fees.</p>
+      <p style="font-size:12px;color:var(--gray-400);margin-top:8px;">Net to organizer on a $200 program at Grow tier (3% commission): approximately $184. Note: Stripe Connect marketplace payouts carry additional per-account and payout fees beyond the base 2.9% + $0.30 <a href="#sources" class="fnref">6</a> &mdash; model these before finalizing organizer economics.</p>
     </div>
     <div>
       <h3 style="font-family:var(--fh);font-size:17px;font-weight:700;margin-bottom:14px;">Founding Organizer Offer</h3>
@@ -446,14 +408,14 @@ footer strong{color:rgba(255,255,255,0.8);}
         <div class="badge-rec" style="margin-bottom:12px;margin-left:0;">Limited to first 100 organizers</div>
         <div style="font-family:var(--fh);font-size:20px;font-weight:800;color:var(--navy);margin-bottom:12px;">Grow tier free for 12 months</div>
         <div style="font-size:13.5px;color:var(--gray-700);display:flex;flex-direction:column;gap:7px;">
-          <div>✅ 0% commission — first 6 months</div>
-          <div>✅ 2% commission — months 7–12</div>
-          <div>✅ Unlimited program listings</div>
-          <div>✅ Founding Organizer badge (permanent)</div>
-          <div>✅ Homepage feature — first 60 days</div>
-          <div>✅ 1:1 setup call with a co-founder</div>
+          <div>&#9989; 0% commission &mdash; first 6 months</div>
+          <div>&#9989; 2% commission &mdash; months 7&ndash;12</div>
+          <div>&#9989; Unlimited program listings</div>
+          <div>&#9989; Founding Organizer badge (permanent)</div>
+          <div>&#9989; Homepage feature &mdash; first 60 days</div>
+          <div>&#9989; 1:1 setup call with a co-founder</div>
         </div>
-        <div style="margin-top:16px;font-size:12px;color:var(--gray-500);">After 12 months: converts to Grow at $49/mo. Projected 50% conversion = $2,450/mo ARR from the first 100 organizers alone.</div>
+        <div style="margin-top:16px;font-size:12px;color:var(--gray-500);">After 12 months: converts to Grow at $49/mo. At a projected 50% conversion <span class="est-tag">Assumption</span> that is ~$2,450/mo recurring revenue from the first 100 organizers alone.</div>
       </div>
     </div>
   </div>
@@ -461,145 +423,103 @@ footer strong{color:rgba(255,255,255,0.8);}
 
 <!-- 05 EXPANSION -->
 <section id="expansion" class="section">
-  <div class="section-tag tag-teal">05 — Geography</div>
+  <div class="section-tag tag-teal">05 &mdash; Geography</div>
   <h2 class="section-title">Launch &amp; Expansion Strategy</h2>
   <p class="section-sub">Metro-first, density-first. Prove unit economics in Greater Boston before expanding statewide. Scale to New England only after MA is dominant.</p>
   <div class="grid-3" style="margin-bottom:28px;">
-    <div class="mregion">
-      <h4>🎯 Phase 1: Greater Boston (Months 1–3)</h4>
+    <div class="mregion"><h4>&#127919; Phase 1: Greater Boston (Months 1&ndash;3)</h4>
       <div class="mstat"><span>Key markets</span><span>Boston, Newton, Brookline, Cambridge, Lexington, Wellesley</span></div>
-      <div class="mstat"><span>School-age children</span><span>~350,000</span></div>
-      <div class="mstat"><span>Median household income</span><span>$90K+</span></div>
-      <div class="mstat"><span>Avg. program spend</span><span>$200–400/program</span></div>
+      <div class="mstat"><span>School-age children</span><span>~250&ndash;300K <a href="#sources" class="fnref">1</a></span></div>
+      <div class="mstat"><span>Median household income</span><span>$90K+ <a href="#sources" class="fnref">1</a></span></div>
+      <div class="mstat"><span>Avg. program spend</span><span>$200&ndash;400 <span class="est-tag">Est.</span></span></div>
       <div class="mstat"><span>Organizer target</span><span>50 by soft launch</span></div>
     </div>
-    <div class="mregion">
-      <h4>📍 Phase 2: All Massachusetts (Months 3–9)</h4>
+    <div class="mregion"><h4>&#128205; Phase 2: All Massachusetts (Months 3&ndash;9)</h4>
       <div class="mstat"><span>Key additions</span><span>Worcester, Springfield, Lowell, Brockton, Quincy</span></div>
-      <div class="mstat"><span>Total addressable</span><span>~1.5M children statewide</span></div>
+      <div class="mstat"><span>Total addressable</span><span>~900K children 5&ndash;17 <a href="#sources" class="fnref">1</a></span></div>
       <div class="mstat"><span>Program categories</span><span>Sports, arts, STEM, tutoring, language</span></div>
       <div class="mstat"><span>Organizer target</span><span>250 statewide by Month 9</span></div>
-      <div class="mstat"><span>Expansion trigger</span><span>$10K+ MRR and 100+ organizers</span></div>
+      <div class="mstat"><span>Expansion trigger</span><span>$10K+ MRR &amp; 100+ organizers</span></div>
     </div>
-    <div class="mregion">
-      <h4>🚀 Phase 3: New England (Year 2)</h4>
+    <div class="mregion"><h4>&#128640; Phase 3: New England (Year 2)</h4>
       <div class="mstat"><span>First expansion</span><span>Rhode Island (smallest, lowest friction)</span></div>
-      <div class="mstat"><span>Sequence</span><span>CT → NH → ME</span></div>
-      <div class="mstat"><span>Legal note</span><span>Each state has distinct background check laws — budget $2–3K/state for legal review</span></div>
-      <div class="mstat"><span>Expansion trigger</span><span>$25K+ MRR and angel funding closed</span></div>
+      <div class="mstat"><span>Sequence</span><span>CT &rarr; NH &rarr; ME</span></div>
+      <div class="mstat"><span>Legal note</span><span>Each state has distinct background-check laws &mdash; budget $2&ndash;3K/state for legal review</span></div>
+      <div class="mstat"><span>Expansion trigger</span><span>$25K+ MRR &amp; angel funding closed</span></div>
     </div>
   </div>
   <h3 style="font-family:var(--fh);font-size:17px;font-weight:700;margin-bottom:16px;">Go-Live Timeline</h3>
   <div class="timeline">
-    <div class="timeline-item">
-      <div class="tdot" style="background:var(--gray-400);"></div>
-      <div class="tlabel" style="color:var(--gray-400);">Now → Week 8</div>
-      <div class="ttitle">Pre-Launch: Validate &amp; Recruit</div>
-      <div class="tdesc">Landing page live in Week 1. Email 500 MA organizers. Target 30 LOIs. Complete trademark search, domain registration, LLC formation, and legal retainer.</div>
-    </div>
-    <div class="timeline-item">
-      <div class="tdot" style="background:var(--amber);"></div>
-      <div class="tlabel" style="color:var(--amber-dark);">Week 10</div>
-      <div class="ttitle">Soft Launch: Boston Metro Only</div>
-      <div class="tdesc">Platform live with 50+ organizers and 150+ programs. Invite-only access for families via PTA lists and early signups. Gather feedback and fix issues before public launch.</div>
-    </div>
-    <div class="timeline-item">
-      <div class="tdot" style="background:var(--teal);"></div>
-      <div class="tlabel" style="color:var(--teal);">Months 1–3</div>
-      <div class="ttitle">Full MA Launch + Marketing Activation</div>
-      <div class="tdesc">Paid social campaigns live. 50+ SEO town pages indexed. PR outreach to Boston Globe and local news. School newsletter partnerships active. Targets: 500 families enrolled, 100 organizers.</div>
-    </div>
-    <div class="timeline-item">
-      <div class="tdot" style="background:var(--navy);"></div>
-      <div class="tlabel" style="color:var(--navy);">Months 4–6</div>
-      <div class="ttitle">Monetization Expansion</div>
-      <div class="tdesc">SaaS tiers and featured listings introduced. First organizer success stories published. Referral program activated. Begin school district conversations. Target: $8–15K MRR.</div>
-    </div>
-    <div class="timeline-item">
-      <div class="tdot" style="background:var(--purple);"></div>
-      <div class="tlabel" style="color:var(--purple);">Months 7–12</div>
-      <div class="ttitle">Scale + Capital Raise</div>
-      <div class="tdesc">Native mobile app launches (iOS + Android). RI expansion begins. Angel round at $25K+ MRR. District licensing pilots with 2–3 MA school districts. Target: $25–40K MRR.</div>
-    </div>
+    <div class="timeline-item"><div class="tdot" style="background:var(--gray-400);"></div><div class="tlabel" style="color:var(--gray-400);">Now &rarr; Week 8</div><div class="ttitle">Pre-Launch: Validate &amp; Recruit</div><div class="tdesc">Landing page live in Week 1. Email 500 MA organizers. Target 30 LOIs. Complete trademark search, domain registration, LLC formation, and legal retainer.</div></div>
+    <div class="timeline-item"><div class="tdot" style="background:var(--amber);"></div><div class="tlabel" style="color:var(--amber-dark);">Week 10</div><div class="ttitle">Soft Launch: Boston Metro Only</div><div class="tdesc">Platform live with 50+ organizers and 150+ programs. Invite-only access for families via PTA lists and early signups. Gather feedback and fix issues before public launch.</div></div>
+    <div class="timeline-item"><div class="tdot" style="background:var(--teal);"></div><div class="tlabel" style="color:var(--teal);">Months 1&ndash;3</div><div class="ttitle">Full MA Launch + Marketing Activation</div><div class="tdesc">Paid social campaigns live. 50+ SEO town pages indexed. PR outreach to Boston Globe and local news. School newsletter partnerships active. Targets: 500 families enrolled, 100 organizers.</div></div>
+    <div class="timeline-item"><div class="tdot" style="background:var(--navy);"></div><div class="tlabel" style="color:var(--navy);">Months 4&ndash;6</div><div class="ttitle">Monetization Expansion</div><div class="tdesc">SaaS tiers and featured listings introduced. First organizer success stories published. Referral program activated. Begin school district conversations. Target: $8&ndash;15K MRR.</div></div>
+    <div class="timeline-item"><div class="tdot" style="background:var(--purple);"></div><div class="tlabel" style="color:var(--purple);">Months 7&ndash;12</div><div class="ttitle">Scale + Capital Raise</div><div class="tdesc">Native mobile app launches (iOS + Android). RI expansion begins. Angel round at $25K+ MRR. District licensing pilots with 2&ndash;3 MA school districts. Target: $25&ndash;40K MRR.</div></div>
   </div>
 </section>
 
 <!-- 06 BUILD PLAN -->
 <section id="phases" class="section">
-  <div class="section-tag tag-purple">06 — Engineering</div>
+  <div class="section-tag tag-purple">06 &mdash; Engineering</div>
   <h2 class="section-title">Phased Build Plan</h2>
-  <p class="section-sub">A 10-week MVP with two founders and an AI-accelerated development stack. The breakdown below shows human hours, AI-generated output equivalent, and cost comparison to traditional agency development.</p>
+  <p class="section-sub">A 10-week MVP with two founders and an AI-accelerated development stack. The figures below are internal planning estimates, not benchmarks &mdash; they assume at least one technically capable founder and meaningful prior development experience.</p>
+  <div class="callout c-amber" style="margin-bottom:20px;">
+    <div class="ci">&#9888;&#65039;</div>
+    <div class="ct"><strong>Read these as planning estimates, not guarantees.</strong> The hour counts and agency-cost comparisons are modeled, not sourced. A payment-processing, COPPA-compliant, CORI-integrated marketplace is non-trivial; the ~300-hour MVP figure is optimistic for two people and assumes heavy AI assistance plus strong engineering fundamentals. Budget contingency time, especially for payments and compliance testing.</div>
+  </div>
   <div class="callout c-teal" style="margin-bottom:28px;">
-    <div class="ci">🤖</div>
-    <div class="ct"><strong>AI development stack (~$90/mo total):</strong> Cursor Pro ($20) for code generation · Claude Pro ($20) for architecture and review · GitHub Copilot ($10) for inline completions · v0.dev ($20) for UI components · Perplexity Pro ($20) for technical research. This stack replaces approximately $15,000/mo in traditional developer cost.</div>
+    <div class="ci">&#129302;</div>
+    <div class="ct"><strong>AI development stack (~$90&ndash;110/mo base):</strong> Cursor Pro ($20) for code generation &middot; Claude Pro ($20) for architecture and review &middot; GitHub Copilot ($10) for inline completions &middot; v0.dev ($20) for UI components &middot; Perplexity Pro ($20) for technical research. <span class="est-tag">Est.</span> Prices are base subscriptions as of 2025 and exclude usage-based overages, which can be significant under heavy use <a href="#sources" class="fnref">7</a>.</div>
   </div>
   <div style="display:flex;flex-direction:column;gap:20px;margin-bottom:32px;">
     <div class="phase-card">
-      <div class="phase-header" style="background:#E8EEFF;">
-        <div>
-          <div class="phase-num" style="color:var(--navy);">Phase 1 — Weeks 1–10</div>
-          <div class="phase-title" style="color:var(--navy);">MVP: Core Marketplace</div>
-        </div>
-        <span style="background:var(--navy);color:white;padding:6px 16px;border-radius:20px;font-size:13px;font-weight:600;">10 weeks</span>
-      </div>
+      <div class="phase-header" style="background:#E8EEFF;"><div><div class="phase-num" style="color:var(--navy);">Phase 1 &mdash; Weeks 1&ndash;10</div><div class="phase-title" style="color:var(--navy);">MVP: Core Marketplace</div></div><span style="background:var(--navy);color:white;padding:6px 16px;border-radius:20px;font-size:13px;font-weight:600;">10 weeks</span></div>
       <div class="phase-body">
         <ul class="phase-features">
           <li>Organizer signup + program listing with category chips</li>
           <li>Family browse, search, and filter</li>
           <li>Stripe payment + enrollment flow</li>
           <li>Parent account with COPPA consent gates</li>
-          <li>Admin dashboard — approvals and user management</li>
-          <li>Organizer dashboard — enrollments and revenue</li>
+          <li>Admin dashboard &mdash; approvals and user management</li>
+          <li>Organizer dashboard &mdash; enrollments and revenue</li>
           <li>CORI verification flow (manual upload, Phase 1)</li>
           <li>Transactional email notifications (Resend)</li>
           <li>Legal pages: Privacy Policy, ToS, COPPA notice</li>
           <li>Supabase auth + database-driven categories table</li>
         </ul>
         <div class="phase-stats">
-          <div><div class="phase-stat-val" style="color:var(--navy);">~300 hrs</div><div class="phase-stat-label">Human hours (2 founders)</div></div>
-          <div><div class="phase-stat-val" style="color:var(--teal);">~850 hrs</div><div class="phase-stat-label">AI-equivalent output</div></div>
-          <div><div class="phase-stat-val" style="color:var(--amber);">$120–180K</div><div class="phase-stat-label">Traditional agency equivalent</div></div>
-          <div><div class="phase-stat-val" style="color:var(--green);">~$2K</div><div class="phase-stat-label">Actual cost</div></div>
+          <div><div class="phase-stat-val" style="color:var(--navy);">~300 hrs</div><div class="phase-stat-label">Human hours (2 founders) <span class="est-tag">Est.</span></div></div>
+          <div><div class="phase-stat-val" style="color:var(--teal);">~850 hrs</div><div class="phase-stat-label">AI-equivalent output <span class="est-tag">Est.</span></div></div>
+          <div><div class="phase-stat-val" style="color:var(--amber);">$120&ndash;180K</div><div class="phase-stat-label">Traditional agency equivalent <span class="est-tag">Est.</span></div></div>
+          <div><div class="phase-stat-val" style="color:var(--green);">~$2K</div><div class="phase-stat-label">Actual cost (tools+infra)</div></div>
         </div>
       </div>
     </div>
     <div class="phase-card">
-      <div class="phase-header" style="background:var(--teal-light);">
-        <div>
-          <div class="phase-num" style="color:#065F46;">Phase 2 — Weeks 11–22</div>
-          <div class="phase-title" style="color:#065F46;">Growth: Analytics + Monetization</div>
-        </div>
-        <span style="background:var(--teal);color:white;padding:6px 16px;border-radius:20px;font-size:13px;font-weight:600;">Month 3–6</span>
-      </div>
+      <div class="phase-header" style="background:var(--teal-light);"><div><div class="phase-num" style="color:#065F46;">Phase 2 &mdash; Weeks 11&ndash;22</div><div class="phase-title" style="color:#065F46;">Growth: Analytics + Monetization</div></div><span style="background:var(--teal);color:white;padding:6px 16px;border-radius:20px;font-size:13px;font-weight:600;">Month 3&ndash;6</span></div>
       <div class="phase-body">
         <ul class="phase-features">
           <li>Advanced organizer analytics dashboard</li>
           <li>Review and rating system</li>
           <li>Waitlist management</li>
-          <li>Stripe Billing — SaaS tier subscriptions</li>
+          <li>Stripe Billing &mdash; SaaS tier subscriptions</li>
           <li>Featured listing upgrade flow</li>
           <li>Mobile PWA + haptic feedback</li>
           <li>Referral program engine</li>
-          <li>SEO infrastructure — sitemap and structured data</li>
+          <li>SEO infrastructure &mdash; sitemap and structured data</li>
           <li>Email marketing integration</li>
           <li>Admin analytics and reporting dashboard</li>
         </ul>
         <div class="phase-stats">
-          <div><div class="phase-stat-val" style="color:var(--teal);">~200 hrs</div><div class="phase-stat-label">Human hours</div></div>
-          <div><div class="phase-stat-val" style="color:var(--teal);">~400 hrs</div><div class="phase-stat-label">AI-equivalent output</div></div>
-          <div><div class="phase-stat-val" style="color:var(--amber);">$60–80K</div><div class="phase-stat-label">Traditional agency equivalent</div></div>
+          <div><div class="phase-stat-val" style="color:var(--teal);">~200 hrs</div><div class="phase-stat-label">Human hours <span class="est-tag">Est.</span></div></div>
+          <div><div class="phase-stat-val" style="color:var(--teal);">~400 hrs</div><div class="phase-stat-label">AI-equivalent <span class="est-tag">Est.</span></div></div>
+          <div><div class="phase-stat-val" style="color:var(--amber);">$60&ndash;80K</div><div class="phase-stat-label">Agency equivalent <span class="est-tag">Est.</span></div></div>
           <div><div class="phase-stat-val" style="color:var(--green);">~$1.5K</div><div class="phase-stat-label">Actual cost</div></div>
         </div>
       </div>
     </div>
     <div class="phase-card">
-      <div class="phase-header" style="background:var(--amber-light);">
-        <div>
-          <div class="phase-num" style="color:var(--amber-dark);">Phase 3 — Month 6–12</div>
-          <div class="phase-title" style="color:var(--amber-dark);">Scale: Mobile + B2B + Expansion</div>
-        </div>
-        <span style="background:var(--amber);color:white;padding:6px 16px;border-radius:20px;font-size:13px;font-weight:600;">Year 1 end</span>
-      </div>
+      <div class="phase-header" style="background:var(--amber-light);"><div><div class="phase-num" style="color:var(--amber-dark);">Phase 3 &mdash; Month 6&ndash;12</div><div class="phase-title" style="color:var(--amber-dark);">Scale: Mobile + B2B + Expansion</div></div><span style="background:var(--amber);color:white;padding:6px 16px;border-radius:20px;font-size:13px;font-weight:600;">Year 1 end</span></div>
       <div class="phase-body">
         <ul class="phase-features">
           <li>React Native iOS application</li>
@@ -607,129 +527,131 @@ footer strong{color:rgba(255,255,255,0.8);}
           <li>School district B2B portal</li>
           <li>Multi-location organizer tools</li>
           <li>Financial aid and scholarship flows</li>
-          <li>Checkr CORI API — full automation</li>
+          <li>Checkr CORI API &mdash; full automation</li>
           <li>Family premium subscription</li>
           <li>Advanced admin reporting</li>
           <li>RI and CT expansion infrastructure</li>
           <li>Third-party API integrations</li>
         </ul>
         <div class="phase-stats">
-          <div><div class="phase-stat-val" style="color:var(--amber-dark);">~500 hrs</div><div class="phase-stat-label">Human hours</div></div>
-          <div><div class="phase-stat-val" style="color:var(--amber-dark);">~700 hrs</div><div class="phase-stat-label">AI-equivalent output</div></div>
-          <div><div class="phase-stat-val" style="color:var(--amber);">$120–160K</div><div class="phase-stat-label">Traditional agency equivalent</div></div>
+          <div><div class="phase-stat-val" style="color:var(--amber-dark);">~500 hrs</div><div class="phase-stat-label">Human hours <span class="est-tag">Est.</span></div></div>
+          <div><div class="phase-stat-val" style="color:var(--amber-dark);">~700 hrs</div><div class="phase-stat-label">AI-equivalent <span class="est-tag">Est.</span></div></div>
+          <div><div class="phase-stat-val" style="color:var(--amber);">$120&ndash;160K</div><div class="phase-stat-label">Agency equivalent <span class="est-tag">Est.</span></div></div>
           <div><div class="phase-stat-val" style="color:var(--green);">~$4K</div><div class="phase-stat-label">Actual cost</div></div>
         </div>
       </div>
     </div>
   </div>
   <div class="metric-row">
-    <div class="mbox"><div class="val">~1,000</div><div class="lbl">Total human hours (Year 1)</div></div>
-    <div class="mbox"><div class="val" style="color:var(--teal);">~1,950</div><div class="lbl">AI-equivalent hours generated</div></div>
-    <div class="mbox"><div class="val" style="color:var(--gray-400);">~3,000</div><div class="lbl">Traditional agency hours</div></div>
-    <div class="mbox"><div class="val" style="color:var(--amber);">$300–450K</div><div class="lbl">Traditional agency cost</div></div>
+    <div class="mbox"><div class="val">~1,000</div><div class="lbl">Total human hours (Year 1) <span class="est-tag">Est.</span></div></div>
+    <div class="mbox"><div class="val" style="color:var(--teal);">~1,950</div><div class="lbl">AI-equivalent hours <span class="est-tag">Est.</span></div></div>
+    <div class="mbox"><div class="val" style="color:var(--gray-400);">~3,000</div><div class="lbl">Traditional agency hours <span class="est-tag">Est.</span></div></div>
+    <div class="mbox"><div class="val" style="color:var(--amber);">$300&ndash;450K</div><div class="lbl">Agency cost <span class="est-tag">Est.</span></div></div>
     <div class="mbox"><div class="val" style="color:var(--green);">~$8K</div><div class="lbl">Actual build cost</div></div>
   </div>
 </section>
 
 <!-- 07 LEGAL -->
 <section id="legal" class="section">
-  <div class="section-tag tag-red">07 — Legal &amp; Compliance</div>
+  <div class="section-tag tag-red">07 &mdash; Legal &amp; Compliance</div>
   <h2 class="section-title">Legal &amp; Compliance Review</h2>
-  <p class="section-sub">Non-negotiable obligations across five areas. Budget $8,000–14,000 before launch. Engage a Massachusetts attorney for COPPA, CORI structure, and Terms of Service before the platform goes live.</p>
+  <p class="section-sub">Non-negotiable obligations across five areas. Budget $8,000&ndash;14,000 before launch. Engage a Massachusetts attorney for COPPA, CORI structure, and Terms of Service before the platform goes live.</p>
   <div class="callout c-red" style="margin-bottom:28px;">
-    <div class="ci">⚠️</div>
-    <div class="ct"><strong>Priority action:</strong> Legal setup is the single most important pre-launch investment for a platform handling children's data and background checks. Cutting corners here creates existential liability. These are largely one-time costs with manageable annual review fees.</div>
+    <div class="ci">&#9888;&#65039;</div>
+    <div class="ct"><strong>Priority action:</strong> Legal setup is the single most important pre-launch investment for a platform handling children's data and background checks. Cutting corners here creates existential liability. These are largely one-time costs with manageable annual review fees. This section reflects rules current as of 2025 but is not legal advice &mdash; confirm all specifics with licensed MA counsel.</div>
   </div>
   <div style="display:flex;flex-direction:column;gap:16px;margin-bottom:28px;">
     <div class="legal-item">
-      <h4><span style="font-size:22px;">👶</span> COPPA — Children's Online Privacy Protection Act</h4>
-      <p style="font-size:13px;color:var(--gray-500);">Applies to any platform that collects data from children under 13. As a youth enrollment marketplace, COPPA is the most critical compliance obligation.</p>
+      <h4><span style="font-size:22px;">&#128118;</span> COPPA &mdash; Children's Online Privacy Protection Act</h4>
+      <p style="font-size:13px;color:var(--gray-500);">Applies to any platform that collects data from children under 13. As a youth enrollment marketplace, COPPA is the most critical compliance obligation. <strong>Note:</strong> the FTC's amended COPPA Rule took effect June 23, 2025, adding new obligations <a href="#sources" class="fnref">8</a>.</p>
       <ul>
-        <li>Parent or guardian must always be the account holder — never the child</li>
+        <li>Parent or guardian must always be the account holder &mdash; never the child</li>
         <li>Verifiable parental consent required before any child data is collected or stored</li>
-        <li>Parents have the right to review, correct, and delete child data at any time — one-click in account settings</li>
+        <li><strong>New (2025 Rule):</strong> separate verifiable parental consent required before sharing child data with third parties (e.g., for targeted advertising) <a href="#sources" class="fnref">8</a></li>
+        <li><strong>New (2025 Rule):</strong> a written data-retention policy is required; child data may not be kept longer than necessary for the purpose collected <a href="#sources" class="fnref">8</a></li>
+        <li>Parents have the right to review, correct, and delete child data at any time &mdash; one-click in account settings</li>
         <li>No behavioral advertising or retargeting using child data, ever</li>
-        <li>Data minimization: collect only name, age, and school grade — nothing beyond what is strictly necessary</li>
+        <li>Data minimization: collect only name, age, and school grade &mdash; nothing beyond what is strictly necessary</li>
         <li>No third-party tracking pixels on any pages that display child information</li>
-        <li>FTC enforcement ceiling: up to $51,744 per violation</li>
+        <li>FTC enforcement ceiling: up to <strong>$53,088 per violation</strong> (2025 inflation-adjusted figure; rises annually) <a href="#sources" class="fnref">9</a></li>
       </ul>
-      <div class="legal-cost">💰 Attorney review: $2,000–4,000 &nbsp;|&nbsp; Termly policy automation: $350/yr &nbsp;|&nbsp; Review: annually + after any platform change</div>
+      <div class="legal-cost">&#128176; Attorney review: $2,000&ndash;4,000 | Termly policy automation: ~$350/yr | Review: annually + after any platform change</div>
     </div>
     <div class="legal-item">
-      <h4><span style="font-size:22px;">🔍</span> CORI — Massachusetts Chapter 6, §172</h4>
-      <p style="font-size:13px;color:var(--gray-500);">Every individual instructor or program contact must be checked individually. Entity EINs serve tax and payment purposes only — they do not substitute for individual CORI clearance.</p>
+      <h4><span style="font-size:22px;">&#128269;</span> CORI &mdash; Massachusetts G.L. c. 6, &sect;172</h4>
+      <p style="font-size:13px;color:var(--gray-500);">Every individual instructor or program contact must be checked individually. Entity EINs serve tax and payment purposes only &mdash; they do not substitute for individual CORI clearance.</p>
       <ul>
-        <li><strong>Option A (Recommended):</strong> Checkr API integration ($29–35/check) — automated, full audit trail, no DCJIS certification required from Activly</li>
-        <li><strong>Option B:</strong> Apply to DCJIS directly as a requestor — $0/check after setup but significantly more administrative burden and principal-level background checks required</li>
-        <li><strong>Option C (Not recommended):</strong> Self-certification upload only — lowest friction but creates platform liability if an unchecked instructor causes harm</li>
-        <li>CORI checks must be renewed every 3 years per DCJIS requirements (certain roles: annually)</li>
-        <li>Store only clearance status and date — never store raw CORI result documents in the database</li>
+        <li><strong>Option A (Recommended):</strong> Checkr API integration ($29&ndash;35/check <a href="#sources" class="fnref">4</a>) &mdash; automated, full audit trail, no DCJIS certification required from Activly</li>
+        <li><strong>Option B:</strong> Apply to MA DCJIS directly as a requestor &mdash; lower per-check cost after setup but significantly more administrative burden and principal-level checks required</li>
+        <li><strong>Option C (Not recommended):</strong> Self-certification upload only &mdash; lowest friction but creates platform liability if an unchecked instructor causes harm</li>
+        <li>CORI clearances should be re-verified periodically (commonly every 1&ndash;3 years depending on role and organization policy) <a href="#sources" class="fnref">10</a></li>
+        <li>Store only clearance status and date &mdash; never store raw CORI result documents in the database</li>
         <li>Organizers cannot publish programs until all listed instructors hold valid CORI clearance</li>
         <li>Build automated expiration alerts: notify organizers 30 days before any check expires</li>
         <li>Display a CORI-verified badge prominently on all program listings</li>
       </ul>
-      <div class="legal-cost">💰 Checkr: $29–35/check (charge organizers $39 — $5–10 margin) &nbsp;|&nbsp; MA employment law attorney: $1,500–3,000 &nbsp;|&nbsp; Review: when MA law changes</div>
+      <div class="legal-cost">&#128176; Checkr: $29&ndash;35/check (charge organizers $39 &mdash; $5&ndash;10 margin) | MA employment-law attorney: $1,500&ndash;3,000 | Review: when MA law changes</div>
     </div>
     <div class="legal-item">
-      <h4><span style="font-size:22px;">🔒</span> Privacy Policy + Terms of Service</h4>
+      <h4><span style="font-size:22px;">&#128274;</span> Privacy Policy + Terms of Service</h4>
       <ul>
-        <li>MA 201 CMR 17.00 requires a written information security program for any company handling personal data of MA residents</li>
+        <li>MA 201 CMR 17.00 requires a Written Information Security Program (WISP) for any company holding personal data of MA residents <a href="#sources" class="fnref">11</a></li>
         <li>Privacy Policy must disclose: data collected, how it is used, who it is shared with, how long it is retained, and how it can be deleted</li>
-        <li>Terms of Service must include: platform liability limitations, organizer certifications, payment terms, refund policy, account termination procedures, and binding arbitration clause</li>
+        <li>Terms of Service must include: platform liability limitations, organizer certifications, payment terms, refund policy, account termination procedures, and a binding arbitration clause</li>
         <li>Organizer certification: written acknowledgment that all instructors are CORI-checked, programs carry appropriate liability insurance, and facilities meet safety standards</li>
         <li>Organizers must re-certify annually at subscription renewal</li>
         <li>GDPR addendum required if any EU-based families use the platform</li>
       </ul>
-      <div class="legal-cost">💰 Attorney drafting: $2,000–3,000 &nbsp;|&nbsp; Termly auto-policy: $350/yr &nbsp;|&nbsp; Review: annually</div>
+      <div class="legal-cost">&#128176; Attorney drafting: $2,000&ndash;3,000 | Termly auto-policy: ~$350/yr | Review: annually</div>
     </div>
     <div class="legal-item">
-      <h4><span style="font-size:22px;">✍️</span> Waivers + Platform Insurance</h4>
+      <h4><span style="font-size:22px;">&#9997;&#65039;</span> Waivers + Platform Insurance</h4>
       <ul>
-        <li>Program-specific liability waivers: parent or guardian signs digitally at enrollment — timestamped and IP-logged</li>
+        <li>Program-specific liability waivers: parent or guardian signs digitally at enrollment &mdash; timestamped and IP-logged</li>
         <li>Waivers should be calibrated to activity type (contact sports carry different risk profiles than art classes)</li>
-        <li>Platform general liability insurance: $1,500–3,000/yr (Hiscox or Next Insurance are startup-accessible)</li>
-        <li>Errors &amp; Omissions and Cyber liability: $1,000–2,500/yr (Coalition specializes in tech startups)</li>
+        <li>Platform general liability insurance: $1,500&ndash;3,000/yr (Hiscox or Next Insurance are startup-accessible) <span class="est-tag">Est.</span></li>
+        <li>Errors &amp; Omissions and Cyber liability: $1,000&ndash;2,500/yr (Coalition specializes in tech startups) <span class="est-tag">Est.</span></li>
         <li>Require organizers to carry their own liability insurance as a condition of listing</li>
       </ul>
-      <div class="legal-cost">💰 Platform insurance: $2,500–5,500/yr &nbsp;|&nbsp; Waiver templates: $500–1,000 attorney review &nbsp;|&nbsp; Review: annually</div>
+      <div class="legal-cost">&#128176; Platform insurance: $2,500&ndash;5,500/yr | Waiver templates: $500&ndash;1,000 attorney review | Review: annually</div>
     </div>
     <div class="legal-item">
-      <h4><span style="font-size:22px;">🏢</span> Business Formation + Intellectual Property</h4>
+      <h4><span style="font-size:22px;">&#127970;</span> Business Formation + Intellectual Property</h4>
       <ul>
-        <li>Form a Massachusetts LLC immediately — $500 filing fee, separates personal from business liability</li>
-        <li>Trademark search: tess2.uspto.gov in Classes 41 (education services) and 42 (software and technology) before finalizing the brand name</li>
-        <li>File trademark applications after search clears — $350–500 per class, $700–1,000 total for both</li>
-        <li>Co-founder agreement: equity split, 4-year vesting with 1-year cliff, IP assignment to the company — must be executed on Day 1</li>
-        <li>Registered Agent service: $100–150/yr</li>
+        <li>Form a Massachusetts LLC immediately &mdash; ~$500 filing fee, separates personal from business liability <a href="#sources" class="fnref">12</a></li>
+        <li>Trademark search: use the USPTO's <strong>Trademark Search at tmsearch.uspto.gov</strong> (this replaced the retired TESS system in November 2023) <a href="#sources" class="fnref">13</a>, searching Classes 41 (education services) and 42 (software/technology) before finalizing the brand name</li>
+        <li>File trademark applications after the search clears &mdash; $350 per class base fee (2025 fee schedule), so ~$700 for both classes <a href="#sources" class="fnref">14</a></li>
+        <li>Co-founder agreement: equity split, 4-year vesting with 1-year cliff, IP assignment to the company &mdash; execute on Day 1</li>
+        <li>Registered Agent service: $100&ndash;150/yr</li>
       </ul>
-      <div class="legal-cost">💰 LLC: $500 &nbsp;|&nbsp; Trademark: $700–1,000 &nbsp;|&nbsp; Co-founder agreement: $1,000–2,000</div>
+      <div class="legal-cost">&#128176; LLC: ~$500 | Trademark: ~$700 (2 classes, base fee) | Co-founder agreement: $1,000&ndash;2,000</div>
     </div>
   </div>
   <div class="callout c-amber">
-    <div class="ci">📋</div>
-    <div class="ct"><strong>Total legal budget at launch:</strong> $8,000–14,000 one-time + $3,000–6,000/yr ongoing (insurance, policy maintenance, annual attorney review). Treat this as infrastructure — not overhead.</div>
+    <div class="ci">&#128203;</div>
+    <div class="ct"><strong>Total legal budget at launch:</strong> $8,000&ndash;14,000 one-time + $3,000&ndash;6,000/yr ongoing (insurance, policy maintenance, annual attorney review). Treat this as infrastructure &mdash; not overhead.</div>
   </div>
 </section>
 
 <!-- 08 IMPLEMENTATION COST -->
 <section id="costs" class="section">
-  <div class="section-tag tag-amber">08 — Implementation Cost</div>
+  <div class="section-tag tag-amber">08 &mdash; Implementation Cost</div>
   <h2 class="section-title">Implementation Cost Estimate</h2>
-  <p class="section-sub">Three build scenarios modeled in full. The founders-led approach with AI tooling is the clear recommendation at this stage — it preserves equity, maintains iteration speed, and keeps total spend under $25K.</p>
+  <p class="section-sub">Three build scenarios modeled in full. The founders-led approach with AI tooling is the clear recommendation at this stage &mdash; it preserves equity, maintains iteration speed, and keeps total spend under $25K. All figures are planning estimates.</p>
   <div class="grid-3" style="margin-bottom:28px;">
     <div class="card" style="border:2px solid var(--teal);">
-      <div style="background:var(--teal);color:white;font-family:var(--fh);font-size:11px;font-weight:700;padding:3px 10px;border-radius:6px;display:inline-block;margin-bottom:14px;letter-spacing:0.06em;">⭐ RECOMMENDED</div>
-      <div style="font-family:var(--fh);font-size:22px;font-weight:800;color:var(--navy);">$15,000–25,000</div>
+      <div style="background:var(--teal);color:white;font-family:var(--fh);font-size:11px;font-weight:700;padding:3px 10px;border-radius:6px;display:inline-block;margin-bottom:14px;letter-spacing:0.06em;">&#11088; RECOMMENDED</div>
+      <div style="font-family:var(--fh);font-size:22px;font-weight:800;color:var(--navy);">$15,000&ndash;25,000</div>
       <div style="font-size:13px;color:var(--gray-400);margin-bottom:12px;">Founders + AI Agent Stack</div>
       <p style="font-size:13px;color:var(--gray-600);">Two founders build the full platform using Cursor, Claude, and v0.dev. Budget covers legal setup, tools, infrastructure, and the first 3 months of operations. Maximum equity retention.</p>
     </div>
     <div class="card">
-      <div style="font-family:var(--fh);font-size:22px;font-weight:800;color:var(--gray-700);">$35,000–65,000</div>
+      <div style="font-family:var(--fh);font-size:22px;font-weight:800;color:var(--gray-700);">$35,000&ndash;65,000</div>
       <div style="font-size:13px;color:var(--gray-400);margin-bottom:12px;">Hybrid: Founders + Contractors</div>
-      <p style="font-size:13px;color:var(--gray-600);">Founders own product, design, and project management. One or two part-time contractors handle mobile and complex integrations. Appropriate if one founder is non-technical.</p>
+      <p style="font-size:13px;color:var(--gray-600);">Founders own product, design, and project management. One or two part-time contractors handle mobile and complex integrations. Appropriate if neither founder is technical.</p>
     </div>
     <div class="card">
-      <div style="font-family:var(--fh);font-size:22px;font-weight:800;color:var(--gray-400);">$100,000–200,000</div>
+      <div style="font-family:var(--fh);font-size:22px;font-weight:800;color:var(--gray-400);">$100,000&ndash;200,000</div>
       <div style="font-size:13px;color:var(--gray-400);margin-bottom:12px;">Full Agency Build</div>
       <p style="font-size:13px;color:var(--gray-600);">Agency handles design and engineering. Highest cash burn, typically slower post-launch iteration, and no institutional knowledge transfer. Not appropriate at seed stage.</p>
     </div>
@@ -740,21 +662,21 @@ footer strong{color:rgba(255,255,255,0.8);}
       <table class="cost-table">
         <thead><tr><th>Item</th><th style="text-align:right;">Cost</th></tr></thead>
         <tbody>
-          <tr><td>Massachusetts LLC formation</td><td class="cost-amt">$500</td></tr>
-          <tr><td>Trademark filing (Classes 41 + 42)</td><td class="cost-amt">$700–1,000</td></tr>
-          <tr><td>Attorney: COPPA + Privacy Policy</td><td class="cost-amt">$2,000–4,000</td></tr>
-          <tr><td>Attorney: ToS + Organizer Certifications + Waivers</td><td class="cost-amt">$2,000–3,000</td></tr>
-          <tr><td>Attorney: CORI structure + MA employment law</td><td class="cost-amt">$1,500–3,000</td></tr>
-          <tr><td>Co-founder agreement</td><td class="cost-amt">$1,000–2,000</td></tr>
-          <tr><td>Domain registration (3 domains, 3 years)</td><td class="cost-amt">$120–180</td></tr>
-          <tr><td>Platform liability insurance (year 1)</td><td class="cost-amt">$2,500–5,500</td></tr>
-          <tr><td>Apple Developer + Google Play accounts</td><td class="cost-amt">$125/yr</td></tr>
-          <tr class="tr-total"><td><strong>One-time total</strong></td><td class="cost-amt"><strong>$10,500–19,500</strong></td></tr>
+          <tr><td>Massachusetts LLC formation <a href="#sources" class="fnref">12</a></td><td class="cost-amt">~$500</td></tr>
+          <tr><td>Trademark filing (2 classes, base fee) <a href="#sources" class="fnref">14</a></td><td class="cost-amt">~$700</td></tr>
+          <tr><td>Attorney: COPPA + Privacy Policy</td><td class="cost-amt">$2,000&ndash;4,000</td></tr>
+          <tr><td>Attorney: ToS + Organizer Certs + Waivers</td><td class="cost-amt">$2,000&ndash;3,000</td></tr>
+          <tr><td>Attorney: CORI structure + MA employment law</td><td class="cost-amt">$1,500&ndash;3,000</td></tr>
+          <tr><td>Co-founder agreement</td><td class="cost-amt">$1,000&ndash;2,000</td></tr>
+          <tr><td>Domain registration (3 domains, 3 years)</td><td class="cost-amt">$120&ndash;180</td></tr>
+          <tr><td>Platform liability insurance (year 1)</td><td class="cost-amt">$2,500&ndash;5,500</td></tr>
+          <tr><td>Apple Developer + Google Play accounts <a href="#sources" class="fnref">15</a></td><td class="cost-amt">$124 (yr 1)</td></tr>
+          <tr class="tr-total"><td><strong>One-time total</strong></td><td class="cost-amt"><strong>$10,400&ndash;19,400</strong></td></tr>
         </tbody>
       </table>
     </div>
     <div>
-      <h3 style="font-family:var(--fh);font-size:16px;font-weight:700;margin-bottom:14px;">Monthly Recurring — Build Phase</h3>
+      <h3 style="font-family:var(--fh);font-size:16px;font-weight:700;margin-bottom:14px;">Monthly Recurring &mdash; Build Phase <span class="est-tag">Est.</span></h3>
       <table class="cost-table">
         <thead><tr><th>Service</th><th style="text-align:right;">Monthly</th></tr></thead>
         <tbody>
@@ -768,13 +690,13 @@ footer strong{color:rgba(255,255,255,0.8);}
           <tr><td>Vercel Pro</td><td class="cost-amt">$20</td></tr>
           <tr><td>Resend (email)</td><td class="cost-amt">$20</td></tr>
           <tr><td>Termly (policy automation)</td><td class="cost-amt">$30</td></tr>
-          <tr class="tr-total"><td><strong>Monthly total</strong></td><td class="cost-amt"><strong>~$200/mo</strong></td></tr>
+          <tr class="tr-total"><td><strong>Monthly total (base)</strong></td><td class="cost-amt"><strong>~$200/mo</strong></td></tr>
         </tbody>
       </table>
       <div style="margin-top:14px;padding:16px;background:var(--green-light);border-radius:var(--radius);border-left:3px solid var(--green);">
         <div style="font-weight:700;font-size:14px;color:#065F46;">10-Week MVP All-In Budget</div>
-        <div style="font-size:24px;font-weight:800;font-family:var(--fh);color:#065F46;margin:4px 0;">$13,000–22,000</div>
-        <div style="font-size:12px;color:#065F46;">Legal + tools + 3 months of infrastructure</div>
+        <div style="font-size:24px;font-weight:800;font-family:var(--fh);color:#065F46;margin:4px 0;">$13,000&ndash;22,000</div>
+        <div style="font-size:12px;color:#065F46;">Legal + tools + 3 months of infrastructure. Excludes AI usage overages and paid marketing.</div>
       </div>
     </div>
   </div>
@@ -782,136 +704,115 @@ footer strong{color:rgba(255,255,255,0.8);}
 
 <!-- 09 INFRA -->
 <section id="infra" class="section">
-  <div class="section-tag tag-navy">09 — Infrastructure</div>
+  <div class="section-tag tag-navy">09 &mdash; Infrastructure</div>
   <h2 class="section-title">Infrastructure &amp; Monthly Service Costs</h2>
-  <p class="section-sub">Fixed platform costs at each growth stage. Variable costs (Stripe, Checkr) scale directly with revenue and are largely offset by the commission model.</p>
+  <p class="section-sub">Fixed platform costs at each growth stage. Variable costs (Stripe, Checkr) scale directly with revenue and are largely offset by the commission model. Tool prices are 2025 base rates <span class="est-tag">Est.</span></p>
   <div class="grid-3" style="margin-bottom:24px;">
     <div>
-      <div style="font-family:var(--fh);font-weight:700;font-size:14px;color:var(--gray-600);margin-bottom:12px;padding:6px 12px;background:var(--gray-100);border-radius:6px;">Launch — Month 0–3</div>
+      <div style="font-family:var(--fh);font-weight:700;font-size:14px;color:var(--gray-600);margin-bottom:12px;padding:6px 12px;background:var(--gray-100);border-radius:6px;">Launch &mdash; Month 0&ndash;3</div>
       <table class="cost-table">
         <thead><tr><th>Service</th><th style="text-align:right;">Cost</th></tr></thead>
         <tbody>
           <tr><td>Supabase Pro</td><td class="cost-amt">$25/mo</td></tr>
           <tr><td>Vercel Pro</td><td class="cost-amt">$20/mo</td></tr>
-          <tr><td>Resend (transactional email)</td><td class="cost-amt">$20/mo</td></tr>
+          <tr><td>Resend (email)</td><td class="cost-amt">$20/mo</td></tr>
           <tr><td>Cloudflare CDN + DNS</td><td class="cost-amt">$0</td></tr>
           <tr><td>Sentry (error tracking)</td><td class="cost-amt">$0</td></tr>
-          <tr><td>Termly (policy compliance)</td><td class="cost-amt">$30/mo</td></tr>
-          <tr><td>Stripe</td><td class="cost-amt cost-var">2.9% + $0.30/txn</td></tr>
-          <tr><td>Checkr (CORI)</td><td class="cost-amt cost-var">$29–35/check</td></tr>
+          <tr><td>Termly (policy)</td><td class="cost-amt">$30/mo</td></tr>
+          <tr><td>Stripe <a href="#sources" class="fnref">6</a></td><td class="cost-amt cost-var">2.9% + $0.30/txn</td></tr>
+          <tr><td>Checkr (CORI) <a href="#sources" class="fnref">4</a></td><td class="cost-amt cost-var">$29&ndash;35/check</td></tr>
           <tr class="tr-total"><td><strong>Fixed monthly</strong></td><td class="cost-amt"><strong>~$95/mo</strong></td></tr>
         </tbody>
       </table>
     </div>
     <div>
-      <div style="font-family:var(--fh);font-weight:700;font-size:14px;color:var(--teal);margin-bottom:12px;padding:6px 12px;background:var(--teal-light);border-radius:6px;">Growth — Month 3–9</div>
+      <div style="font-family:var(--fh);font-weight:700;font-size:14px;color:var(--teal);margin-bottom:12px;padding:6px 12px;background:var(--teal-light);border-radius:6px;">Growth &mdash; Month 3&ndash;9</div>
       <table class="cost-table">
         <thead><tr><th>Service</th><th style="text-align:right;">Cost</th></tr></thead>
         <tbody>
           <tr><td>Previous tier</td><td class="cost-amt">$95/mo</td></tr>
-          <tr><td>Intercom Starter (support)</td><td class="cost-amt">$74/mo</td></tr>
-          <tr><td>PostHog (product analytics)</td><td class="cost-amt">$0–50/mo</td></tr>
-          <tr><td>Twilio SMS notifications</td><td class="cost-amt">$20–40/mo</td></tr>
-          <tr><td>Sentry Team tier</td><td class="cost-amt">$26/mo</td></tr>
-          <tr><td>Apollo.io (organizer outreach)</td><td class="cost-amt">$49/mo</td></tr>
-          <tr><td>Paid social (Facebook/Instagram)</td><td class="cost-amt">$500–1,000/mo</td></tr>
-          <tr class="tr-total"><td><strong>Fixed monthly</strong></td><td class="cost-amt"><strong>~$310–380/mo</strong></td></tr>
+          <tr><td>Intercom Starter</td><td class="cost-amt">~$74/mo</td></tr>
+          <tr><td>PostHog (analytics)</td><td class="cost-amt">$0&ndash;50/mo</td></tr>
+          <tr><td>Twilio SMS</td><td class="cost-amt">$20&ndash;40/mo</td></tr>
+          <tr><td>Sentry Team</td><td class="cost-amt">$26/mo</td></tr>
+          <tr><td>Apollo.io (outreach)</td><td class="cost-amt">$49/mo</td></tr>
+          <tr><td>Paid social</td><td class="cost-amt">$500&ndash;1,000/mo</td></tr>
+          <tr class="tr-total"><td><strong>Fixed monthly</strong></td><td class="cost-amt"><strong>~$310&ndash;380/mo</strong></td></tr>
         </tbody>
       </table>
     </div>
     <div>
-      <div style="font-family:var(--fh);font-weight:700;font-size:14px;color:var(--amber-dark);margin-bottom:12px;padding:6px 12px;background:var(--amber-light);border-radius:6px;">Scale — Month 9–12</div>
+      <div style="font-family:var(--fh);font-weight:700;font-size:14px;color:var(--amber-dark);margin-bottom:12px;padding:6px 12px;background:var(--amber-light);border-radius:6px;">Scale &mdash; Month 9&ndash;12</div>
       <table class="cost-table">
         <thead><tr><th>Service</th><th style="text-align:right;">Cost</th></tr></thead>
         <tbody>
           <tr><td>Previous tier</td><td class="cost-amt">$380/mo</td></tr>
-          <tr><td>Supabase usage overage</td><td class="cost-amt">+$50–100/mo</td></tr>
-          <tr><td>Upstash Redis (caching)</td><td class="cost-amt">$20/mo</td></tr>
-          <tr><td>Insurance (monthly avg)</td><td class="cost-amt">~$375/mo</td></tr>
-          <tr><td>Legal annual review (avg)</td><td class="cost-amt">~$150/mo</td></tr>
-          <tr><td>Contingency reserve</td><td class="cost-amt">$50/mo</td></tr>
-          <tr class="tr-total"><td><strong>Fixed monthly</strong></td><td class="cost-amt"><strong>~$500–650/mo</strong></td></tr>
+          <tr><td>Supabase overage</td><td class="cost-amt">+$50&ndash;100/mo</td></tr>
+          <tr><td>Upstash Redis</td><td class="cost-amt">$20/mo</td></tr>
+          <tr><td>Insurance (mo avg)</td><td class="cost-amt">~$375/mo</td></tr>
+          <tr><td>Legal review (avg)</td><td class="cost-amt">~$150/mo</td></tr>
+          <tr><td>Contingency</td><td class="cost-amt">$50/mo</td></tr>
+          <tr class="tr-total"><td><strong>Fixed monthly</strong></td><td class="cost-amt"><strong>~$500&ndash;650/mo</strong></td></tr>
         </tbody>
       </table>
     </div>
   </div>
   <div class="callout c-teal">
-    <div class="ci">💡</div>
-    <div class="ct"><strong>Unit economics check:</strong> At $500/mo in fixed infrastructure and $25K MRR (Month 12 target), infrastructure represents 2% of revenue — well within healthy marketplace benchmarks. Fixed cost break-even requires only 12 Grow-tier organizers at $49/mo ($588), which covers all non-ad infrastructure costs.</div>
+    <div class="ci">&#128161;</div>
+    <div class="ct"><strong>Unit economics check:</strong> At ~$500/mo fixed infrastructure and a $25K MRR target by Month 12, infrastructure would be ~2% of revenue &mdash; healthy for a marketplace. Fixed-cost break-even needs roughly 12 Grow-tier organizers at $49/mo (~$588), covering all non-ad infrastructure. Note: the $25K MRR figure is a modeled target, not a forecast.</div>
   </div>
 </section>
 
 <!-- 10 MAINTENANCE -->
 <section id="maintenance" class="section">
-  <div class="section-tag tag-teal">10 — Post Go-Live</div>
+  <div class="section-tag tag-teal">10 &mdash; Post Go-Live</div>
   <h2 class="section-title">Post Go-Live Maintenance Strategy</h2>
-  <p class="section-sub">Maintenance effort and costs by quarter, with explicit hiring triggers to prevent founder burnout as the platform scales.</p>
+  <p class="section-sub">Maintenance effort and costs by quarter, with explicit hiring triggers to prevent founder burnout as the platform scales. Effort figures are planning estimates.</p>
   <div class="grid-2" style="margin-bottom:28px;">
     <div>
-      <h3 style="font-family:var(--fh);font-size:17px;font-weight:700;margin-bottom:16px;">Weekly Effort by Quarter</h3>
+      <h3 style="font-family:var(--fh);font-size:17px;font-weight:700;margin-bottom:16px;">Weekly Effort by Quarter <span class="est-tag">Est.</span></h3>
       <div style="display:flex;flex-direction:column;gap:12px;">
-        <div style="border:1px solid var(--gray-200);border-radius:var(--radius);padding:16px;background:white;">
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
-            <span style="font-weight:700;font-size:14px;">Q1 Post-Launch (Months 1–3)</span>
-            <span class="pill pill-teal">20–25 hrs/wk</span>
-          </div>
-          <div style="font-size:13px;color:var(--gray-500);">Bug triage: 8–10 hrs &middot; Customer support: 5–8 hrs &middot; Feature iteration: 5 hrs &middot; Infrastructure monitoring: 2 hrs</div>
-        </div>
-        <div style="border:1px solid var(--gray-200);border-radius:var(--radius);padding:16px;background:white;">
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
-            <span style="font-weight:700;font-size:14px;">Q2 (Months 3–6)</span>
-            <span class="pill pill-amber">30–40 hrs/wk</span>
-          </div>
-          <div style="font-size:13px;color:var(--gray-500);">Feature development: 15–20 hrs &middot; Growth and marketing: 10 hrs &middot; Customer support: 5–7 hrs &middot; Bug fixes: 3–5 hrs</div>
-        </div>
-        <div style="border:1px solid var(--gray-200);border-radius:var(--radius);padding:16px;background:white;">
-          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
-            <span style="font-weight:700;font-size:14px;">Q3–Q4 (Months 6–12)</span>
-            <span class="pill pill-navy">40–50 hrs/wk</span>
-          </div>
-          <div style="font-size:13px;color:var(--gray-500);">Mobile app build: 15–20 hrs &middot; Feature development: 10 hrs &middot; Growth and marketing: 10 hrs &middot; Support and admin: 8–10 hrs</div>
-        </div>
+        <div style="border:1px solid var(--gray-200);border-radius:var(--radius);padding:16px;background:white;"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;"><span style="font-weight:700;font-size:14px;">Q1 Post-Launch (Months 1&ndash;3)</span><span class="pill pill-teal">20&ndash;25 hrs/wk</span></div><div style="font-size:13px;color:var(--gray-500);">Bug triage: 8&ndash;10 hrs &middot; Customer support: 5&ndash;8 hrs &middot; Feature iteration: 5 hrs &middot; Infrastructure monitoring: 2 hrs</div></div>
+        <div style="border:1px solid var(--gray-200);border-radius:var(--radius);padding:16px;background:white;"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;"><span style="font-weight:700;font-size:14px;">Q2 (Months 3&ndash;6)</span><span class="pill pill-amber">30&ndash;40 hrs/wk</span></div><div style="font-size:13px;color:var(--gray-500);">Feature development: 15&ndash;20 hrs &middot; Growth and marketing: 10 hrs &middot; Customer support: 5&ndash;7 hrs &middot; Bug fixes: 3&ndash;5 hrs</div></div>
+        <div style="border:1px solid var(--gray-200);border-radius:var(--radius);padding:16px;background:white;"><div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;"><span style="font-weight:700;font-size:14px;">Q3&ndash;Q4 (Months 6&ndash;12)</span><span class="pill pill-navy">40&ndash;50 hrs/wk</span></div><div style="font-size:13px;color:var(--gray-500);">Mobile app build: 15&ndash;20 hrs &middot; Feature development: 10 hrs &middot; Growth and marketing: 10 hrs &middot; Support and admin: 8&ndash;10 hrs</div></div>
       </div>
     </div>
     <div>
-      <h3 style="font-family:var(--fh);font-size:17px;font-weight:700;margin-bottom:16px;">Annual Maintenance Budget</h3>
+      <h3 style="font-family:var(--fh);font-size:17px;font-weight:700;margin-bottom:16px;">Annual Maintenance Budget <span class="est-tag">Est.</span></h3>
       <table class="cost-table">
         <thead><tr><th>Category</th><th style="text-align:right;">Annual Cost</th></tr></thead>
         <tbody>
-          <tr><td>Infrastructure (scaling avg)</td><td class="cost-amt">$3,000–6,000</td></tr>
-          <tr><td>Legal annual review</td><td class="cost-amt">$1,500–2,500</td></tr>
-          <tr><td>Platform insurance renewal</td><td class="cost-amt">$2,500–5,500</td></tr>
-          <tr><td>Development tools</td><td class="cost-amt">$840–1,200</td></tr>
-          <tr><td>Marketing tools and paid ads</td><td class="cost-amt">$6,000–12,000</td></tr>
-          <tr><td>Intercom support platform</td><td class="cost-amt">$900–1,800</td></tr>
-          <tr><td>Compliance updates</td><td class="cost-amt">$500–1,000</td></tr>
-          <tr class="tr-total"><td><strong>Annual total</strong></td><td class="cost-amt"><strong>$15,000–30,000/yr</strong></td></tr>
+          <tr><td>Infrastructure (scaling avg)</td><td class="cost-amt">$3,000&ndash;6,000</td></tr>
+          <tr><td>Legal annual review</td><td class="cost-amt">$1,500&ndash;2,500</td></tr>
+          <tr><td>Platform insurance renewal</td><td class="cost-amt">$2,500&ndash;5,500</td></tr>
+          <tr><td>Development tools</td><td class="cost-amt">$840&ndash;1,200</td></tr>
+          <tr><td>Marketing tools and paid ads</td><td class="cost-amt">$6,000&ndash;12,000</td></tr>
+          <tr><td>Intercom support platform</td><td class="cost-amt">$900&ndash;1,800</td></tr>
+          <tr><td>Compliance updates</td><td class="cost-amt">$500&ndash;1,000</td></tr>
+          <tr class="tr-total"><td><strong>Annual total</strong></td><td class="cost-amt"><strong>$15,000&ndash;30,000/yr</strong></td></tr>
         </tbody>
       </table>
       <div class="callout c-navy" style="margin-top:14px;">
-        <div class="ci">👥</div>
-        <div class="ct"><strong>First hire trigger:</strong> When ticket volume exceeds 50/week or MRR reaches $20K — whichever comes first. Start with a part-time Customer Success contractor at $20–30/hr, 20 hrs/wk. Full-time CSM hire at $30K+ MRR.</div>
+        <div class="ci">&#128101;</div>
+        <div class="ct"><strong>First hire trigger:</strong> When ticket volume exceeds 50/week or MRR reaches $20K &mdash; whichever comes first. Start with a part-time Customer Success contractor at $20&ndash;30/hr, 20 hrs/wk. Full-time CSM hire at $30K+ MRR.</div>
       </div>
     </div>
   </div>
   <h3 style="font-family:var(--fh);font-size:17px;font-weight:700;margin-bottom:16px;">Key Maintenance Milestones</h3>
   <div class="grid-3">
-    <div class="mregion">
-      <h4>Month 1 — Monitoring Setup</h4>
+    <div class="mregion"><h4>Month 1 &mdash; Monitoring Setup</h4>
       <div class="mstat"><span>Sentry error alerts</span><span>All errors, day 1</span></div>
       <div class="mstat"><span>Uptime monitoring</span><span>BetterUptime (free)</span></div>
       <div class="mstat"><span>Weekly bug review</span><span>Every Monday</span></div>
       <div class="mstat"><span>Stripe payout audit</span><span>Weekly</span></div>
     </div>
-    <div class="mregion">
-      <h4>Month 3 — Security Audit</h4>
+    <div class="mregion"><h4>Month 3 &mdash; Security Audit</h4>
       <div class="mstat"><span>Supabase RLS policies</span><span>Full review</span></div>
       <div class="mstat"><span>Stripe webhook validation</span><span>End-to-end test</span></div>
       <div class="mstat"><span>COPPA data audit</span><span>Confirm no leaks</span></div>
-      <div class="mstat"><span>Dependency vulnerabilities</span><span>npm audit fix</span></div>
+      <div class="mstat"><span>Dependency scan</span><span>npm audit fix</span></div>
     </div>
-    <div class="mregion">
-      <h4>Month 12 — Annual Review</h4>
+    <div class="mregion"><h4>Month 12 &mdash; Annual Review</h4>
       <div class="mstat"><span>Legal policy review</span><span>Attorney sign-off</span></div>
       <div class="mstat"><span>CORI expiration audit</span><span>All checks current</span></div>
       <div class="mstat"><span>Insurance renewal</span><span>Shop all quotes</span></div>
@@ -922,102 +823,63 @@ footer strong{color:rgba(255,255,255,0.8);}
 
 <!-- 11 CUSTOMER SUPPORT -->
 <section id="support" class="section">
-  <div class="section-tag tag-teal">11 — Customer Support</div>
+  <div class="section-tag tag-teal">11 &mdash; Customer Support</div>
   <h2 class="section-title">Customer Support Strategy</h2>
-  <p class="section-sub">An AI-first, three-tier escalation model. The goal is to resolve 60–70% of tickets automatically while ensuring high-value issues always reach a founder.</p>
+  <p class="section-sub">An AI-first, three-tier escalation model. The goal is to resolve 60&ndash;70% of tickets automatically while ensuring high-value issues always reach a founder.</p>
   <div style="display:flex;flex-direction:column;gap:14px;margin-bottom:28px;">
     <div class="stier">
-      <div class="stier-head" style="background:var(--gray-100);">
-        <span style="font-size:22px;">🤖</span>
-        <div>
-          <div style="font-family:var(--fh);font-weight:700;font-size:15px;color:var(--gray-900);">Level 1 — Intercom Fin AI &nbsp;·&nbsp; Response: Instant</div>
-          <div style="font-size:12px;color:var(--gray-500);">Handles 60–70% of all tickets automatically via the trained knowledge base</div>
-        </div>
-        <span class="pill pill-green" style="margin-left:auto;">$74/mo</span>
-      </div>
-      <div class="stier-body">
-        <ul>
-          <li>Enrollment confirmation questions ("Is my child enrolled?")</li>
-          <li>Payment receipts and invoice requests</li>
-          <li>Password reset and account access help</li>
-          <li>How to list a program (organizer FAQ)</li>
-          <li>Cancellation policy and refund eligibility questions</li>
-          <li>Data deletion and account closure requests</li>
-        </ul>
-      </div>
+      <div class="stier-head" style="background:var(--gray-100);"><span style="font-size:22px;">&#129302;</span><div><div style="font-family:var(--fh);font-weight:700;font-size:15px;color:var(--gray-900);">Level 1 &mdash; Intercom Fin AI &nbsp;&middot;&nbsp; Response: Instant</div><div style="font-size:12px;color:var(--gray-500);">Targets 60&ndash;70% of all tickets resolved automatically via the trained knowledge base <span class="est-tag">Target</span></div></div><span class="pill pill-teal" style="margin-left:auto;">~$74/mo</span></div>
+      <div class="stier-body"><ul>
+        <li>Enrollment confirmation questions ("Is my child enrolled?")</li>
+        <li>Payment receipts and invoice requests</li>
+        <li>Password reset and account access help</li>
+        <li>How to list a program (organizer FAQ)</li>
+        <li>Cancellation policy and refund eligibility questions</li>
+        <li>Data deletion and account closure requests</li>
+      </ul></div>
     </div>
     <div class="stier">
-      <div class="stier-head" style="background:#E8EEFF;">
-        <span style="font-size:22px;">📧</span>
-        <div>
-          <div style="font-family:var(--fh);font-weight:700;font-size:15px;color:var(--navy);">Level 2 — Email / Chat (Founder) &nbsp;·&nbsp; SLA: 4 hrs chat, 24 hrs email</div>
-          <div style="font-size:12px;color:var(--gray-500);">Handles 25–35% of tickets — issues requiring judgment or platform access</div>
-        </div>
-        <span class="pill pill-navy" style="margin-left:auto;">Founder-handled</span>
-      </div>
-      <div class="stier-body">
-        <ul>
-          <li>Payment disputes and chargeback investigations</li>
-          <li>CORI status questions and verification appeals</li>
-          <li>Program approval requests requiring manual review</li>
-          <li>Family complaints about organizer conduct or program quality</li>
-          <li>Refund approvals above standard policy thresholds</li>
-        </ul>
-      </div>
+      <div class="stier-head" style="background:#E8EEFF;"><span style="font-size:22px;">&#128231;</span><div><div style="font-family:var(--fh);font-weight:700;font-size:15px;color:var(--navy);">Level 2 &mdash; Email / Chat (Founder) &nbsp;&middot;&nbsp; SLA: 4 hrs chat, 24 hrs email</div><div style="font-size:12px;color:var(--gray-500);">~25&ndash;35% of tickets &mdash; issues requiring judgment or platform access</div></div><span class="pill pill-navy" style="margin-left:auto;">Founder-handled</span></div>
+      <div class="stier-body"><ul>
+        <li>Payment disputes and chargeback investigations</li>
+        <li>CORI status questions and verification appeals</li>
+        <li>Program approval requests requiring manual review</li>
+        <li>Family complaints about organizer conduct or program quality</li>
+        <li>Refund approvals above standard policy thresholds</li>
+      </ul></div>
     </div>
     <div class="stier">
-      <div class="stier-head" style="background:var(--amber-light);">
-        <span style="font-size:22px;">📞</span>
-        <div>
-          <div style="font-family:var(--fh);font-weight:700;font-size:15px;color:var(--amber-dark);">Level 3 — Zoom Call (Co-founder) &nbsp;·&nbsp; Schedule within 48 hrs</div>
-          <div style="font-size:12px;color:var(--gray-500);">High-value relationships and escalations — approximately 5% of total volume</div>
-        </div>
-        <span class="pill pill-amber" style="margin-left:auto;">High-value only</span>
-      </div>
-      <div class="stier-body">
-        <ul>
-          <li>Founding Organizer onboarding calls — scheduled proactively, not reactively</li>
-          <li>Major payment disputes above $500</li>
-          <li>Potential legal issues or safety concerns involving a child</li>
-          <li>School district or enterprise partnership conversations</li>
-          <li>At-risk organizers considering cancellation — save the account</li>
-        </ul>
-      </div>
+      <div class="stier-head" style="background:var(--amber-light);"><span style="font-size:22px;">&#128222;</span><div><div style="font-family:var(--fh);font-weight:700;font-size:15px;color:var(--amber-dark);">Level 3 &mdash; Zoom Call (Co-founder) &nbsp;&middot;&nbsp; Schedule within 48 hrs</div><div style="font-size:12px;color:var(--gray-500);">High-value relationships and escalations &mdash; ~5% of total volume</div></div><span class="pill pill-amber" style="margin-left:auto;">High-value only</span></div>
+      <div class="stier-body"><ul>
+        <li>Founding Organizer onboarding calls &mdash; scheduled proactively</li>
+        <li>Major payment disputes above $500</li>
+        <li>Potential legal issues or safety concerns involving a child</li>
+        <li>School district or enterprise partnership conversations</li>
+        <li>At-risk organizers considering cancellation &mdash; save the account</li>
+      </ul></div>
     </div>
   </div>
   <div class="grid-2">
     <div>
       <h3 style="font-family:var(--fh);font-size:17px;font-weight:700;margin-bottom:16px;">Self-Service and Community</h3>
       <div style="display:flex;flex-direction:column;gap:10px;">
-        <div style="border:1px solid var(--gray-200);border-radius:var(--radius);padding:14px 16px;background:white;">
-          <div style="font-weight:700;font-size:13.5px;color:var(--gray-900);">Help Center (Notion or GitBook — free)</div>
-          <div style="font-size:12.5px;color:var(--gray-500);margin-top:3px;">20–30 articles covering FAQ for both organizers and families. Published before launch. Linked from every Intercom response.</div>
-        </div>
-        <div style="border:1px solid var(--gray-200);border-radius:var(--radius);padding:14px 16px;background:white;">
-          <div style="font-weight:700;font-size:13.5px;color:var(--gray-900);">Founding Organizer Slack group</div>
-          <div style="font-size:12.5px;color:var(--gray-500);margin-top:3px;">Private community for the first 100 organizers. Peer support, feature previews, and a direct line to the co-founders. Builds loyalty and reduces support volume.</div>
-        </div>
-        <div style="border:1px solid var(--gray-200);border-radius:var(--radius);padding:14px 16px;background:white;">
-          <div style="font-weight:700;font-size:13.5px;color:var(--gray-900);">Monthly organizer webinars</div>
-          <div style="font-size:12.5px;color:var(--gray-500);margin-top:3px;">30-minute Zoom session, first Wednesday of each month. Tips, new features, live Q&amp;A. Recorded and posted to the Help Center.</div>
-        </div>
-        <div style="border:1px solid var(--gray-200);border-radius:var(--radius);padding:14px 16px;background:white;">
-          <div style="font-weight:700;font-size:13.5px;color:var(--gray-900);">Loom video walkthroughs (free)</div>
-          <div style="font-size:12.5px;color:var(--gray-500);margin-top:3px;">5–10 short screen recordings: listing a first program, managing enrollments, reading analytics. Estimated to reduce repetitive L1 support by 30%.</div>
-        </div>
+        <div style="border:1px solid var(--gray-200);border-radius:var(--radius);padding:14px 16px;background:white;"><div style="font-weight:700;font-size:13.5px;color:var(--gray-900);">Help Center (Notion or GitBook &mdash; free)</div><div style="font-size:12.5px;color:var(--gray-500);margin-top:3px;">20&ndash;30 articles for organizers and families. Published before launch. Linked from every Intercom response.</div></div>
+        <div style="border:1px solid var(--gray-200);border-radius:var(--radius);padding:14px 16px;background:white;"><div style="font-weight:700;font-size:13.5px;color:var(--gray-900);">Founding Organizer Slack group</div><div style="font-size:12.5px;color:var(--gray-500);margin-top:3px;">Private community for the first 100 organizers. Peer support, feature previews, direct line to co-founders.</div></div>
+        <div style="border:1px solid var(--gray-200);border-radius:var(--radius);padding:14px 16px;background:white;"><div style="font-weight:700;font-size:13.5px;color:var(--gray-900);">Monthly organizer webinars</div><div style="font-size:12.5px;color:var(--gray-500);margin-top:3px;">30-minute Zoom, first Wednesday of each month. Tips, new features, live Q&amp;A. Recorded to the Help Center.</div></div>
+        <div style="border:1px solid var(--gray-200);border-radius:var(--radius);padding:14px 16px;background:white;"><div style="font-weight:700;font-size:13.5px;color:var(--gray-900);">Loom video walkthroughs (free)</div><div style="font-size:12.5px;color:var(--gray-500);margin-top:3px;">5&ndash;10 short screen recordings covering core organizer tasks. Reduces repetitive L1 support.</div></div>
       </div>
     </div>
     <div>
-      <h3 style="font-family:var(--fh);font-size:17px;font-weight:700;margin-bottom:16px;">Support KPIs</h3>
+      <h3 style="font-family:var(--fh);font-size:17px;font-weight:700;margin-bottom:16px;">Support KPIs <span class="est-tag">Target</span></h3>
       <table class="cost-table">
         <thead><tr><th>Metric</th><th style="text-align:right;">Target</th></tr></thead>
         <tbody>
-          <tr><td>First response time — chat</td><td class="cost-amt">&lt; 4 hours</td></tr>
-          <tr><td>First response time — email</td><td class="cost-amt">&lt; 24 hours</td></tr>
+          <tr><td>First response time &mdash; chat</td><td class="cost-amt">&lt; 4 hours</td></tr>
+          <tr><td>First response time &mdash; email</td><td class="cost-amt">&lt; 24 hours</td></tr>
           <tr><td>Ticket resolution time</td><td class="cost-amt">&lt; 48 hours</td></tr>
           <tr><td>AI auto-resolution rate</td><td class="cost-amt">&gt; 60%</td></tr>
           <tr><td>CSAT score (post-resolution)</td><td class="cost-amt">&gt; 4.5 / 5</td></tr>
-          <tr><td>Organizer churn from support issues</td><td class="cost-amt">&lt; 5%</td></tr>
+          <tr><td>Organizer churn from support</td><td class="cost-amt">&lt; 5%</td></tr>
           <tr><td>Net Promoter Score (quarterly)</td><td class="cost-amt">&gt; 50</td></tr>
         </tbody>
       </table>
@@ -1027,95 +889,121 @@ footer strong{color:rgba(255,255,255,0.8);}
 
 <!-- 12 STRATEGIC ADDITIONS -->
 <section id="bonus" class="section">
-  <div class="section-tag tag-coral">12 — Strategic Additions</div>
+  <div class="section-tag tag-coral">12 &mdash; Strategic Additions</div>
   <h2 class="section-title">Critical Strategic Considerations</h2>
   <p class="section-sub">Six areas that fall outside the core operational plan but are essential for long-term platform success, fundraising, and exit readiness.</p>
   <div class="grid-2">
-    <div class="card">
-      <div style="font-size:24px;margin-bottom:10px;">📊</div>
-      <div class="card-title">KPIs to Track from Day 1</div>
-      <div class="card-sub">North Star metrics for the marketplace.</div>
-      <ul style="font-size:13px;color:var(--gray-600);list-style:none;display:flex;flex-direction:column;gap:5px;">
-        <li>✦ GMV — total enrollment dollars processed through Activly</li>
-        <li>✦ Take rate — Activly revenue as a percentage of GMV</li>
-        <li>✦ Organizer CAC and Family CAC — cost to acquire each side</li>
-        <li>✦ Enrollment conversion rate — browse-to-enroll percentage</li>
-        <li>✦ Organizer churn rate — monthly and annual</li>
-        <li>✦ Programs per organizer — indicates platform depth</li>
-        <li>✦ NPS — tracked quarterly for both user groups</li>
-      </ul>
-    </div>
-    <div class="card">
-      <div style="font-size:24px;margin-bottom:10px;">💰</div>
-      <div class="card-title">Fundraising Strategy</div>
-      <div class="card-sub">When and how to raise capital.</div>
-      <ul style="font-size:13px;color:var(--gray-600);list-style:none;display:flex;flex-direction:column;gap:5px;">
-        <li>✦ Do not raise until $10K+ MRR — traction is the proof point</li>
-        <li>✦ Angel round target: $250K–500K at a $2–3M valuation</li>
-        <li>✦ MA resources: MassVentures, MassTech, Greentown Labs</li>
-        <li>✦ NSF SBIR Phase I grant: up to $275K, non-dilutive</li>
-        <li>✦ Deploy capital toward: mobile app, MA marketing, first CS hire</li>
-        <li>✦ Series A target: $2–5M at $8–15M valuation (Year 2)</li>
-      </ul>
-    </div>
-    <div class="card">
-      <div style="font-size:24px;margin-bottom:10px;">🏆</div>
-      <div class="card-title">Pre-Build Demand Validation</div>
-      <div class="card-sub">De-risk the build before writing any code.</div>
-      <ul style="font-size:13px;color:var(--gray-600);list-style:none;display:flex;flex-direction:column;gap:5px;">
-        <li>✦ Build a landing page in one week (Typedream or Carrd, free)</li>
-        <li>✦ Email 200 MA program directors with the Founding Organizer offer</li>
-        <li>✦ Target: 30 signed letters of interest within 2 weeks</li>
-        <li>✦ 30+ LOIs = confirmed supply-side demand, proceed to build</li>
-        <li>✦ Under 15 LOIs = revisit positioning and offer before committing capital</li>
-        <li>✦ Track open rates, reply rates, and LOI conversion at each step</li>
-      </ul>
-    </div>
-    <div class="card">
-      <div style="font-size:24px;margin-bottom:10px;">🤝</div>
-      <div class="card-title">Institutional Partnership Pipeline</div>
-      <div class="card-sub">Partnerships accelerate supply-side growth faster than cold outreach.</div>
-      <ul style="font-size:13px;color:var(--gray-600);list-style:none;display:flex;flex-direction:column;gap:5px;">
-        <li>✦ YMCA of Greater Boston — 15 branches, hundreds of programs</li>
-        <li>✦ Boys &amp; Girls Clubs of MA — 30+ clubs statewide</li>
-        <li>✦ MA Municipal Recreation Departments — 351 towns each have one</li>
-        <li>✦ MA DESE — a formal endorsement provides instant platform credibility</li>
-        <li>✦ Begin conversations at Month 1; partnership agreements typically close in 3–6 months</li>
-      </ul>
-    </div>
-    <div class="card">
-      <div style="font-size:24px;margin-bottom:10px;">🚪</div>
-      <div class="card-title">Exit &amp; Acquisition Horizon (Year 3–5)</div>
-      <div class="card-sub">Build toward exit from day one — clean data, clean cap table, clean code.</div>
-      <ul style="font-size:13px;color:var(--gray-600);list-style:none;display:flex;flex-direction:column;gap:5px;">
-        <li>✦ Most likely acquirers: Mindbody, ClassPass, Varsity Tutors, K12 Inc.</li>
-        <li>✦ Strategic partners: YMCA National, Boys &amp; Girls Clubs national office</li>
-        <li>✦ Marketplace businesses trade at 3–8× ARR on acquisition</li>
-        <li>✦ At $3M ARR: potential exit range of $9–24M</li>
-        <li>✦ Build with clean architecture and documented processes from day one</li>
-      </ul>
-    </div>
-    <div class="card">
-      <div style="font-size:24px;margin-bottom:10px;">📱</div>
-      <div class="card-title">Mobile Application Strategy</div>
-      <div class="card-sub">Families live on mobile — the app is the product long-term.</div>
-      <ul style="font-size:13px;color:var(--gray-600);list-style:none;display:flex;flex-direction:column;gap:5px;">
-        <li>✦ Phase 1: Progressive Web App (PWA) — installable, zero App Store friction</li>
-        <li>✦ Phase 3: React Native iOS + Android native applications</li>
-        <li>✦ Apple Developer Program: $99/yr &nbsp;·&nbsp; Google Play: $25 one-time</li>
-        <li>✦ COPPA note: apps involving children under 13 face additional App Store review scrutiny — disclose clearly in metadata</li>
-        <li>✦ Target: 4.5+ star rating from the first day of app store availability</li>
-      </ul>
-    </div>
+    <div class="card"><div style="font-size:24px;margin-bottom:10px;">&#128202;</div><div class="card-title">KPIs to Track from Day 1</div><div class="card-sub">North Star metrics for the marketplace.</div><ul style="font-size:13px;color:var(--gray-600);list-style:none;display:flex;flex-direction:column;gap:5px;">
+      <li>&#10022; GMV &mdash; total enrollment dollars processed</li>
+      <li>&#10022; Take rate &mdash; revenue as a % of GMV</li>
+      <li>&#10022; Organizer CAC and Family CAC</li>
+      <li>&#10022; Enrollment conversion rate (browse &rarr; enroll)</li>
+      <li>&#10022; Organizer churn rate (monthly + annual)</li>
+      <li>&#10022; Programs per organizer (platform depth)</li>
+      <li>&#10022; NPS &mdash; quarterly, both user groups</li>
+    </ul></div>
+    <div class="card"><div style="font-size:24px;margin-bottom:10px;">&#128176;</div><div class="card-title">Fundraising Strategy</div><div class="card-sub">When and how to raise capital.</div><ul style="font-size:13px;color:var(--gray-600);list-style:none;display:flex;flex-direction:column;gap:5px;">
+      <li>&#10022; Do not raise until $10K+ MRR &mdash; traction is the proof</li>
+      <li>&#10022; Angel round target: $250K&ndash;500K at $2&ndash;3M valuation <span class="est-tag">Est.</span></li>
+      <li>&#10022; MA resources: MassVentures, MassTech, Greentown Labs</li>
+      <li>&#10022; NSF SBIR Phase I: non-dilutive grant funding <a href="#sources" class="fnref">16</a></li>
+      <li>&#10022; Deploy capital: mobile app, MA marketing, first CS hire</li>
+      <li>&#10022; Series A target: $2&ndash;5M at $8&ndash;15M valuation (Year 2) <span class="est-tag">Est.</span></li>
+    </ul></div>
+    <div class="card"><div style="font-size:24px;margin-bottom:10px;">&#127942;</div><div class="card-title">Pre-Build Demand Validation</div><div class="card-sub">De-risk the build before writing any code.</div><ul style="font-size:13px;color:var(--gray-600);list-style:none;display:flex;flex-direction:column;gap:5px;">
+      <li>&#10022; Build a landing page in one week (Typedream/Carrd, free)</li>
+      <li>&#10022; Email 200 MA program directors with the Founding offer</li>
+      <li>&#10022; Target: 30 signed letters of interest within 2 weeks</li>
+      <li>&#10022; 30+ LOIs = confirmed demand, proceed to build</li>
+      <li>&#10022; Under 15 LOIs = revisit positioning before committing capital</li>
+      <li>&#10022; Track open rates, reply rates, LOI conversion</li>
+    </ul></div>
+    <div class="card"><div style="font-size:24px;margin-bottom:10px;">&#129309;</div><div class="card-title">Institutional Partnership Pipeline</div><div class="card-sub">Partnerships accelerate supply-side growth.</div><ul style="font-size:13px;color:var(--gray-600);list-style:none;display:flex;flex-direction:column;gap:5px;">
+      <li>&#10022; YMCA of Greater Boston &mdash; multiple branches, many programs</li>
+      <li>&#10022; Boys &amp; Girls Clubs of MA &mdash; 30+ clubs statewide</li>
+      <li>&#10022; MA Municipal Rec Departments &mdash; all 351 towns <a href="#sources" class="fnref">5</a></li>
+      <li>&#10022; MA DESE &mdash; endorsement provides platform credibility</li>
+      <li>&#10022; Begin at Month 1; deals typically close in 3&ndash;6 months</li>
+    </ul></div>
+    <div class="card"><div style="font-size:24px;margin-bottom:10px;">&#128682;</div><div class="card-title">Exit &amp; Acquisition Horizon (Year 3&ndash;5)</div><div class="card-sub">Build toward exit from day one.</div><ul style="font-size:13px;color:var(--gray-600);list-style:none;display:flex;flex-direction:column;gap:5px;">
+      <li>&#10022; Likely acquirers: Mindbody, ClassPass, Varsity Tutors</li>
+      <li>&#10022; Strategic partners: YMCA National, Boys &amp; Girls Clubs HQ</li>
+      <li>&#10022; Marketplace businesses often trade at 3&ndash;8&times; ARR <span class="est-tag">Est.</span></li>
+      <li>&#10022; At $3M ARR: illustrative $9&ndash;24M range <span class="est-tag">Est.</span></li>
+      <li>&#10022; Keep clean data, cap table, and code from day one</li>
+    </ul></div>
+    <div class="card"><div style="font-size:24px;margin-bottom:10px;">&#128241;</div><div class="card-title">Mobile Application Strategy</div><div class="card-sub">Families live on mobile.</div><ul style="font-size:13px;color:var(--gray-600);list-style:none;display:flex;flex-direction:column;gap:5px;">
+      <li>&#10022; Phase 1: PWA (installable) &mdash; zero App Store friction</li>
+      <li>&#10022; Phase 3: React Native iOS + Android native apps</li>
+      <li>&#10022; Apple Developer: $99/yr &middot; Google Play: $25 one-time <a href="#sources" class="fnref">15</a></li>
+      <li>&#10022; COPPA: apps for under-13 face added App Store scrutiny &mdash; disclose clearly</li>
+      <li>&#10022; Target: 4.5+ star rating from launch day</li>
+    </ul></div>
   </div>
   <div class="callout c-amber" style="margin-top:24px;">
-    <div class="ci">🏁</div>
-    <div class="ct"><strong>The single most important action item:</strong> Complete the pre-build LOI validation before writing a line of application code. Then recruit and onboard 50 organizers before opening the platform to families. A marketplace with 200 programs is ten times more valuable than a beautiful, empty one. Every other strategic decision flows from a strong supply side.</div>
+    <div class="ci">&#127937;</div>
+    <div class="ct"><strong>The single most important action item:</strong> Complete the pre-build LOI validation before writing a line of application code. Then recruit and onboard 50 organizers before opening the platform to families. A marketplace with 200 programs is far more valuable than a beautiful, empty one. Every other strategic decision flows from a strong supply side.</div>
+  </div>
+</section>
+
+<!-- SOURCES & ASSUMPTIONS -->
+<section id="sources" class="section">
+  <div class="section-tag tag-gray">Appendix &mdash; Verification</div>
+  <h2 class="section-title">Sources &amp; Assumptions</h2>
+  <p class="section-sub">Every externally-checkable figure in this plan is referenced below, with its source and verification date. Figures marked <span class="est-tag">Est.</span> / <span class="est-tag">Modeled</span> / <span class="est-tag">Assumption</span> throughout the document are internal planning estimates, not sourced facts &mdash; they should be pressure-tested, not cited.</p>
+
+  <div class="callout c-navy" style="margin-bottom:24px;">
+    <div class="ci">&#128270;</div>
+    <div class="ct"><strong>How to read this plan:</strong> Numbers fall into three buckets. <strong>Sourced facts</strong> (footnoted below) are verified against public sources as of the dates shown. <strong>Vendor prices</strong> are accurate as published in 2025 but change frequently &mdash; reconfirm before quoting externally. <strong>Estimates and models</strong> (tagged inline) are our own planning assumptions and carry no external authority. Always reconfirm legal and compliance specifics with licensed Massachusetts counsel.</div>
+  </div>
+
+  <h3 style="font-family:var(--fh);font-size:16px;font-weight:700;margin-bottom:8px;">Referenced Sources</h3>
+  <div style="background:white;border:1px solid var(--gray-200);border-radius:var(--radius-lg);padding:8px 24px;margin-bottom:28px;">
+    <div class="src-item"><span class="src-num">1</span><strong>MA child population.</strong> Massachusetts total population ~7.28M with a youth share of ~15.2% (U.S. Census-derived demographic data, 2024), implying roughly 1.1M residents under 18 and approximately 850K&ndash;950K ages 5&ndash;17. The plan uses "~900K ages 5&ndash;17." Verify against U.S. Census Bureau QuickFacts (census.gov/quickfacts/MA) before external use. Verified 2025.</div>
+    <div class="src-item"><span class="src-num">2</span><strong>MA enrichment-spend market size.</strong> No public, citable figure exists for total Massachusetts after-school/enrichment spend. Any dollar figure here is an <em>internal estimate</em> and should be built bottom-up (children &times; participation rate &times; average annual spend) with stated assumptions before being presented to investors or partners. Not independently verified.</div>
+    <div class="src-item"><span class="src-num">3</span><strong>Competitor pricing.</strong> Sawyer (now operated by DaySmart) is listed by third-party directories at a starting price around $129/mo plus marketplace booking fees (2025). ActivityHero operates subscription + performance-based marketing tiers rather than a flat commission. Confirm current pricing on each vendor's site before external use. Verified 2025.</div>
+    <div class="src-item"><span class="src-num">4</span><strong>Background-check pricing.</strong> Checkr per-check pricing (~$29&ndash;35) is an estimate based on typical published rates; actual pricing is negotiated and volume-dependent. Confirm directly with Checkr. Not independently verified at the per-check level.</div>
+    <div class="src-item"><span class="src-num">5</span><strong>351 MA municipalities.</strong> Massachusetts has 351 cities and towns &mdash; a well-established figure (Commonwealth of Massachusetts). Note: not every town operates an independent recreation department. Verified 2025.</div>
+    <div class="src-item"><span class="src-num">6</span><strong>Stripe fees.</strong> Standard Stripe card processing is 2.9% + $0.30 per successful charge (U.S., 2025). Marketplace payouts via Stripe Connect carry additional fees (per-account and payout charges) not reflected in the simplified checkout example. Model full Connect pricing before finalizing organizer economics. Verified 2025.</div>
+    <div class="src-item"><span class="src-num">7</span><strong>AI/dev tool subscriptions.</strong> Cursor, Claude, GitHub Copilot, v0.dev, and Perplexity base subscription prices (~$10&ndash;20/mo each) as published in 2025. Most have usage-based tiers that can exceed the base price under heavy use. Reconfirm current pricing. Verified 2025.</div>
+    <div class="src-item"><span class="src-num">8</span><strong>2025 COPPA Rule amendments.</strong> The FTC's amended COPPA Rule took effect June 23, 2025, adding requirements including separate verifiable parental consent for third-party data sharing and a written data-retention policy. Source: FTC / Federal Register, 2025. Confirm current obligations with counsel. Verified 2025.</div>
+    <div class="src-item"><span class="src-num">9</span><strong>COPPA civil penalty ceiling.</strong> The maximum FTC civil penalty was adjusted to $53,088 per violation effective January 2025 (up from $51,744 in 2024). This figure is adjusted annually for inflation. Source: FTC, "Inflation-Adjusted Civil Penalty Amounts for 2025." Verified 2025.</div>
+    <div class="src-item"><span class="src-num">10</span><strong>CORI renewal cadence.</strong> Massachusetts DCJIS governs CORI access. Re-verification intervals vary by role and organizational policy (commonly 1&ndash;3 years); there is no single universal statutory renewal period for all roles. Confirm requirements for your specific use case with DCJIS / counsel. Partially verified.</div>
+    <div class="src-item"><span class="src-num">11</span><strong>MA 201 CMR 17.00.</strong> Massachusetts data-security regulation requires a Written Information Security Program (WISP) for entities holding personal information of MA residents. Source: Commonwealth of Massachusetts regulations. Verified 2025.</div>
+    <div class="src-item"><span class="src-num">12</span><strong>MA LLC formation fee.</strong> The Massachusetts LLC Certificate of Organization filing fee is approximately $500 (MA Secretary of the Commonwealth). Verify current fee at sec.state.ma.us. Verified 2025.</div>
+    <div class="src-item"><span class="src-num">13</span><strong>USPTO Trademark Search (TESS retired).</strong> The USPTO retired the legacy TESS system on November 30, 2023, replacing it with "Trademark Search" at tmsearch.uspto.gov. The old tess2.uspto.gov address is no longer in use. Source: USPTO. Verified 2025.</div>
+    <div class="src-item"><span class="src-num">14</span><strong>USPTO trademark filing fee.</strong> Effective January 18, 2025, the USPTO uses a single base application fee of $350 per class (replacing the prior TEAS Plus/Standard tiers), with possible surcharges for custom or lengthy descriptions. Two classes at the base fee = ~$700. Source: USPTO 2025 fee schedule. Verified 2025.</div>
+    <div class="src-item"><span class="src-num">15</span><strong>App store fees.</strong> Apple Developer Program is $99/yr; Google Play Console is a one-time $25 registration fee. First-year combined ~$124. Source: Apple / Google developer documentation. Verified 2025.</div>
+    <div class="src-item"><span class="src-num">16</span><strong>NSF SBIR.</strong> The NSF SBIR program provides non-dilutive funding to early-stage companies; Phase I award amounts and eligibility are set by NSF and change over time. Confirm current award ceilings and eligibility (including for-profit and child-services applicability) at seedfund.nsf.gov before relying on this channel. Partially verified.</div>
+  </div>
+
+  <h3 style="font-family:var(--fh);font-size:16px;font-weight:700;margin-bottom:8px;">Key Modeling Assumptions</h3>
+  <div class="grid-2">
+    <div class="mregion"><h4>Revenue model assumptions</h4>
+      <div class="mstat"><span>Organizers at launch</span><span>50</span></div>
+      <div class="mstat"><span>Avg. programs per organizer</span><span>4</span></div>
+      <div class="mstat"><span>Avg. enrollment price</span><span>$250</span></div>
+      <div class="mstat"><span>Fill rate</span><span>60%</span></div>
+      <div class="mstat"><span>Students per program</span><span>10</span></div>
+      <div class="mstat"><span>Founding organizer paid conversion</span><span>50% at Mo. 13</span></div>
+    </div>
+    <div class="mregion"><h4>Build &amp; ops assumptions</h4>
+      <div class="mstat"><span>Founding team</span><span>2 (&ge;1 technical)</span></div>
+      <div class="mstat"><span>MVP human hours</span><span>~300</span></div>
+      <div class="mstat"><span>MVP calendar time</span><span>10 weeks</span></div>
+      <div class="mstat"><span>Target family CAC</span><span>&lt; $15</span></div>
+      <div class="mstat"><span>AI auto-resolution target</span><span>&gt; 60%</span></div>
+      <div class="mstat"><span>Month 12 MRR target</span><span>$25&ndash;40K</span></div>
+    </div>
+  </div>
+  <div class="callout c-red" style="margin-top:24px;">
+    <div class="ci">&#9888;&#65039;</div>
+    <div class="ct"><strong>Disclaimer:</strong> This document is an internal strategic plan, not legal, financial, or investment advice. Market-size and revenue figures are estimates and projections, not forecasts or guarantees. All compliance items (COPPA, CORI, MA 201 CMR 17.00, insurance, trademark) must be confirmed with licensed Massachusetts professionals before launch. Vendor pricing and regulatory figures were checked in 2025 and change over time &mdash; reconfirm before external use.</div>
   </div>
 </section>
 
 <footer>
-  <strong>Activly Strategic Business Plan</strong> &nbsp;·&nbsp; Confidential Co-founder Document &nbsp;·&nbsp; May 2025
+  <strong>Activly Strategic Business Plan</strong> &nbsp;&middot;&nbsp; Confidential Co-founder Document &nbsp;&middot;&nbsp; Figures verified 2025 &mdash; reconfirm before external use
 </footer>
 </body>
 </html>
